@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.tvTest.text = "asdf"
 
     }
 }
