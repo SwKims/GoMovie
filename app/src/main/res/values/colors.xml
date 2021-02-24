@@ -12,4 +12,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#474f5a</color>
+    <color name="detailTextColor">#489CCF</color>
+    <color name="expandText">#00000000</color>
 </resources>

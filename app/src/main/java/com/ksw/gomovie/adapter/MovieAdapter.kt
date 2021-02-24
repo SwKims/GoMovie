@@ -15,7 +15,7 @@ import com.ksw.gomovie.util.Constants.Companion.IMAGE_BASE_URL
  * Created by KSW on 2021-02-23
  */
 
-class MovieAdapter(private val movies: List<Movie>, private val context: Context) :
+class MovieAdapter(private val movies: List<Movie>) :
     RecyclerView.Adapter<MovieAdapter.MovieHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieHolder {
@@ -50,6 +50,12 @@ class MovieAdapter(private val movies: List<Movie>, private val context: Context
                     .centerInside()
                     .into(binding.ivMovieImage)
             }
+
+            itemView.setOnClickListener {
+
+            }
+
+
         }
 
         companion object {

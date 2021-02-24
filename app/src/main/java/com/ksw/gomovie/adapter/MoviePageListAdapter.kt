@@ -2,6 +2,7 @@ package com.ksw.gomovie.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.ksw.gomovie.R
+import com.ksw.gomovie.activity.MovieDetailActivity
 import com.ksw.gomovie.databinding.ItemMovieListBinding
 import com.ksw.gomovie.databinding.ItemNetworkStateBinding
 import com.ksw.gomovie.model.main.Movie
@@ -93,12 +95,12 @@ class MoviePageListAdapter(private val context: Context) :
                     .into(binding.ivMovieImage)
             }
 
-            /*itemView.setOnClickListener {
+            itemView.setOnClickListener {
                 val intent = Intent(context, MovieDetailActivity::class.java)
                 intent.putExtra("id", movie?.id)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 context.startActivity(intent)
-            }*/
+            }
 
         }
     }
