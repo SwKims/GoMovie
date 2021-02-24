@@ -36,11 +36,11 @@ class MovieAdapter(private val movies: List<Movie>, private val context: Context
 
         @SuppressLint("SetTextI18n")
         fun bind(movies: Movie) {
-            binding.tvMovieTitle.text = movies?.title
-            binding.tvRating.text = "\uD83C\uDF1F " + movies?.voteAverage.toString()
+            binding.tvMovieTitle.text = movies.title
+            binding.tvRating.text = "\uD83C\uDF1F " + movies.voteAverage.toString()
 
-            if (!movies.posterPath.isNullOrEmpty()) {
-                val postUrl = IMAGE_BASE_URL + movies?.posterPath
+            if (movies.posterPath.isNotEmpty()) {
+                val postUrl = IMAGE_BASE_URL + movies.posterPath
                 Glide.with(itemView.context)
                     .load(postUrl)
                     .into(binding.ivMovieImage)

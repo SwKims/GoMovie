@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit
  * Created by KSW on 2021-02-23
  */
 
+
 object NetworkModule {
 
     fun getClient(): MovieServiceApi {
@@ -22,9 +23,7 @@ object NetworkModule {
             val url = chain.request()
                     .url()
                     .newBuilder()
-                    .addQueryParameter(
-                            "api_key", API_KEY
-                    )
+                    .addQueryParameter("api_key", API_KEY)
                     .addQueryParameter("language", LANGUAGE)
                     .build()
 
@@ -38,7 +37,7 @@ object NetworkModule {
 
         val okHttpClient = OkHttpClient.Builder()
                 .addInterceptor(requestInterceptor)
-                .connectTimeout(30, TimeUnit.SECONDS)
+                .connectTimeout(60, TimeUnit.SECONDS)
                 .build()
 
         return Retrofit.Builder()

@@ -12,10 +12,13 @@ import retrofit2.http.Query
 
 interface MovieServiceApi {
 
-    @GET("movie/{type}?region=in")
+  /*  @GET("movie/{type}?region=in")
     fun getMovieList(
             @Path("type") type: String,
             @Query("page") page: Int
-    ): Single<MovieResponse>
+    ): Single<MovieResponse>*/
+
+    @GET("movie/popular")
+    fun getMovieList(@Query("page") page : Int) : Single<MovieResponse>
 
 }

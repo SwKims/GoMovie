@@ -9,18 +9,12 @@ enum class Status {
     FAILED,
 }
 
-class NetworkState(val status: Status, val msg: String) {
+class NetworkState(val status: Status, val message: String) {
     companion object {
-        val LOADED: NetworkState
-        val LOADING: NetworkState
-        val ERROR: NetworkState
-        val ENDOFLIST: NetworkState
+        val LOADED: NetworkState = NetworkState(Status.SUCCESS, "성공")
+        val LOADING: NetworkState = NetworkState(Status.RUNNING, "로딩중")
+        val ERROR: NetworkState = NetworkState(Status.FAILED, "실패")
+        val END: NetworkState = NetworkState(Status.FAILED, "데이터의 끝입니다.")
 
-        init {
-            LOADED = NetworkState(Status.SUCCESS, "Success")
-            LOADING = NetworkState(Status.RUNNING, "Running")
-            ERROR = NetworkState(Status.FAILED, "Error")
-            ENDOFLIST = NetworkState(Status.FAILED, "End of List")
-        }
     }
 }

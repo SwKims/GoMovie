@@ -11,7 +11,6 @@ import com.ksw.gomovie.fragment.MovieListFragment
  */
 
 class MovieTabAdapter(
-    private val context: Context,
     fragmentManager: FragmentManager,
     private var totalTabs: Int
 ): FragmentPagerAdapter(fragmentManager!!) {
