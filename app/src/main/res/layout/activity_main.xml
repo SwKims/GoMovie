@@ -32,11 +32,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="@drawable/bottom_bar"
-        android:gravity="bottom"
         android:elevation="16dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
         android:padding="12dp"
         app:bnc_mode="spread"
-        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <com.gauravk.bubblenavigation.BubbleToggleView
@@ -87,5 +87,6 @@
             app:bt_title="Search" />
 
     </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

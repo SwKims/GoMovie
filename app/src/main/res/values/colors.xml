@@ -14,4 +14,5 @@
     <color name="grey">#474f5a</color>
     <color name="detailTextColor">#489CCF</color>
     <color name="expandText">#00000000</color>
+    <color name="yellow">#FDD835</color>
 </resources>

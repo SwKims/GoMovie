@@ -72,7 +72,7 @@ class MovieDetailActivity : AppCompatActivity() {
                 val targetFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd")
                 val date: Date = originalFormat.parse(it.releaseDate)
                 val formatDate: String = targetFormat.format(date)
-//                binding.tvReleaseDate.text = "월" + formatDate + "일"
+                binding.tvReleaseDate.text = formatDate
             }
 
             binding.tvStatus.text = it.status

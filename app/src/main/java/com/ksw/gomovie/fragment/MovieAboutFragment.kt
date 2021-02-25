@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.ksw.gomovie.adapter.TrailerListAdapter
 import com.ksw.gomovie.databinding.MovieDetailAboutBinding
 import com.ksw.gomovie.model.detail.*
 import com.ksw.gomovie.network.MovieServiceApi
@@ -25,6 +27,8 @@ class MovieAboutFragment(private var movieId: Int) : Fragment() {
 
     private lateinit var movieDetailViewModel: MovieDetailViewModel
     private lateinit var movieDetailRepository: MovieDetailRepository
+
+    private lateinit var trailerAdapter: TrailerListAdapter
 
     private lateinit var movieBackdrop: List<BackDrop>
     private lateinit var moviePoster: List<Poster>
@@ -50,8 +54,7 @@ class MovieAboutFragment(private var movieId: Int) : Fragment() {
     private fun populatingViews() {
         movieDetailViewModel.movieDetails.observe(viewLifecycleOwner) {
 
-//            binding.tvOverview.text = it.overview
-
+            binding.tvOverview.text = it.overview
             binding.tvTitle.text = it.originalTitle
 
             if (it.runtime.toString() != "0") {
@@ -84,8 +87,28 @@ class MovieAboutFragment(private var movieId: Int) : Fragment() {
             } else {
                 binding.tvProductionCountries.text = "-"
             }
-
         }
+
+        movieDetailViewModel.videoDetails.observe(viewLifecycleOwner) {
+
+            if (!it.videosList.isNullOrEmpty()) {
+                trailerAdapter =
+                    TrailerListAdapter(
+                        it.videosList,
+                        binding.root.context
+                    )
+                val linearLayoutManager = LinearLayoutManager(activity)
+                linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL
+
+                binding.trailerRecyclerview.layoutManager = linearLayoutManager
+                binding.trailerRecyclerview.setHasFixedSize(true)
+                binding.trailerRecyclerview.adapter = trailerAdapter
+            } else {
+                binding.trailerRecyclerview.visibility = View.GONE
+            }
+        }
+
+
     }
 
 

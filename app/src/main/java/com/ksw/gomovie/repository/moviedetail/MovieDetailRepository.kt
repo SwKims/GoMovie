@@ -1,6 +1,7 @@
 package com.ksw.gomovie.repository.moviedetail
 
 import androidx.lifecycle.LiveData
+import com.ksw.gomovie.model.VideoResponse
 import com.ksw.gomovie.model.main.MovieDetail
 import com.ksw.gomovie.network.MovieServiceApi
 import com.ksw.gomovie.network.NetworkState
@@ -26,6 +27,20 @@ class MovieDetailRepository(private val apiServiceApi: MovieServiceApi) {
         movieDetailDataSource.loadMovieDetails(movieId)
 
         return movieDetailDataSource.movieDetailsResponse
+    }
+
+    fun loadingMovieVideos(
+        compositeDisposable: CompositeDisposable,
+        movieId: Int
+    ): LiveData<VideoResponse> {
+        movieDetailDataSource =
+            MovieDetailDataSource(
+                apiServiceApi,
+                compositeDisposable
+            )
+        movieDetailDataSource.loadMovieVideos(movieId)
+
+        return movieDetailDataSource.movieVideoResponse
     }
 
     fun getMovieDetailNetworkState(): LiveData<NetworkState> {

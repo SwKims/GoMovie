@@ -2,6 +2,7 @@ package com.ksw.gomovie.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
+import com.ksw.gomovie.model.VideoResponse
 import com.ksw.gomovie.model.main.MovieDetail
 import com.ksw.gomovie.network.NetworkState
 import com.ksw.gomovie.repository.moviedetail.MovieDetailRepository
@@ -19,6 +20,10 @@ class MovieDetailViewModel(
 
     val movieDetails: LiveData<MovieDetail> by lazy {
         movieDetailRepository.loadingMovieDetails(compositeDisposable, movieId)
+    }
+
+    val videoDetails: LiveData<VideoResponse> by lazy {
+        movieDetailRepository.loadingMovieVideos(compositeDisposable, movieId)
     }
 
     val networkState: LiveData<NetworkState> by lazy {

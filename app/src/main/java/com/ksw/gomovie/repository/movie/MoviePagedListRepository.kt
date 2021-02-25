@@ -7,7 +7,7 @@ import androidx.paging.LivePagedListBuilder
 import com.ksw.gomovie.model.main.Movie
 import com.ksw.gomovie.network.MovieServiceApi
 import com.ksw.gomovie.network.NetworkState
-import com.ksw.gomovie.util.Constants.Companion.POST_PER_PAGE
+import com.ksw.gomovie.util.Constants.Companion.END_PAGE
 import io.reactivex.disposables.CompositeDisposable
 
 /**
@@ -28,7 +28,7 @@ class MoviePagedListRepository(private val apiServiceApi: MovieServiceApi) {
         val config = PagedList.Config
             .Builder()
             .setEnablePlaceholders(false)
-            .setPageSize(POST_PER_PAGE)
+            .setPageSize(END_PAGE)
             .build()
 
         moviePageList = LivePagedListBuilder(movieDataSourceFactory, config)

@@ -14,7 +14,6 @@
         <!-- Customize your theme here. -->
     </style>
 
-
     <style name="MovieDetailTitle">
         <item name="android:textColor">@color/detailTextColor</item>
         <item name="android:textStyle">bold</item>
@@ -24,7 +23,13 @@
     <style name="MovieDetails">
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">13sp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="VideoTitle">
+        <item name="android:textColor">@color/yellow</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
 
