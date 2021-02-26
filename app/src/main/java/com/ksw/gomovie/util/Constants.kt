@@ -14,6 +14,7 @@ class Constants {
         const val LANGUAGE = "ko-KR"
         const val TRAILER_THUMBNAIL_BASE_URL = "https://img.youtube.com/vi/"
         const val TRAILER_THUMBNAIL_END_URL = "/0.jpg"
+        const val MOVIE_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
         var homePage = ""
     }
 }

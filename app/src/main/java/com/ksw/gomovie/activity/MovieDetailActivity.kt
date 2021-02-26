@@ -11,14 +11,17 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.google.android.material.tabs.TabLayout
 import com.ksw.gomovie.R
+import com.ksw.gomovie.adapter.MovieDetailImageSlideAdapter
 import com.ksw.gomovie.adapter.MovieDetailTabAdapter
 import com.ksw.gomovie.databinding.MovieDetailBinding
+import com.ksw.gomovie.model.detail.Image
 import com.ksw.gomovie.network.MovieServiceApi
 import com.ksw.gomovie.network.NetworkModule
 import com.ksw.gomovie.repository.moviedetail.MovieDetailRepository
 import com.ksw.gomovie.util.Constants.Companion.IMAGE_BASE_URL
 import com.ksw.gomovie.util.Constants.Companion.homePage
 import com.ksw.gomovie.viewmodel.MovieDetailViewModel
+import com.smarteist.autoimageslider.SliderAnimations
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -39,7 +42,7 @@ class MovieDetailActivity : AppCompatActivity() {
         binding = MovieDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val data = intent.extras
+        var data = intent.extras
         var movieId = data!!.getInt("id")
 
         val apiService: MovieServiceApi = NetworkModule.getClient()
@@ -81,6 +84,9 @@ class MovieDetailActivity : AppCompatActivity() {
             binding.btHomepage.setOnClickListener {
                 openMovieSite()
             }
+
+//            setImageSlider(it.images!!.backdrops)
+
 
             if (it.backdropPath.isNotEmpty()) {
                 val detailUrl: String = IMAGE_BASE_URL + it.backdropPath
@@ -124,6 +130,14 @@ class MovieDetailActivity : AppCompatActivity() {
         }
     }
 
+    /*private fun setImageSlider(image: List<Image>) {
+        image?.let {
+            binding.ivMovieDetailImage.sliderAdapter = MovieDetailImageSlideAdapter(image)
+            binding.ivMovieDetailImage.setSliderTransformAnimation(SliderAnimations.FADETRANSFORMATION)
+            binding.ivMovieDetailImage.setIndicatorVisibility(false)
+        }
+    }*/
+
     private fun getViewModel(movieId: Int): MovieDetailViewModel {
         return ViewModelProvider(this, object : ViewModelProvider.Factory{
             override fun <T : ViewModel?> create(modelClass: Class<T>): T {
@@ -134,3 +148,4 @@ class MovieDetailActivity : AppCompatActivity() {
     }
 
 }
+

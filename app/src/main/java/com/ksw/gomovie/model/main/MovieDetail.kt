@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName
 import com.ksw.gomovie.model.detail.ProductionCompany
 import com.ksw.gomovie.model.detail.ProductionCountry
 import com.ksw.gomovie.model.detail.SpokenLanguage
+import com.ksw.gomovie.model.response.ImageResponse
 
 /**
  * Created by KSW on 2021-02-24
@@ -46,5 +47,6 @@ data class MovieDetail(
     @SerializedName("vote_average")
     val voteAverage: Double,
     @SerializedName("vote_count")
-    val voteCount: Int
+    val voteCount: Int,
+    var images: ImageResponse? = null
 )

@@ -34,6 +34,17 @@
                     android:scaleType="center"
                     tools:ignore="ContentDescription" />
 
+                <!--<com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/iv_movie_detailImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/colorPrimary"
+                    android:scaleType="center"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderScrollTimeInSec="5"
+                    app:sliderStartAutoCycle="true" />
+-->
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="200dp" />
