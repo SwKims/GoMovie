@@ -16,7 +16,7 @@ import io.reactivex.schedulers.Schedulers
 class MovieDataSource(
     private val apiServiceApi: MovieServiceApi,
     private val compositeDisposable: CompositeDisposable,
-//    private val type: String
+    private val type: String
 ) : PageKeyedDataSource<Int, Movie>() {
 
     var page = FIRST_PAGE
@@ -29,7 +29,7 @@ class MovieDataSource(
         networkState.postValue(NetworkState.LOADING)
 
         compositeDisposable.add(
-            apiServiceApi.getMovieList(page)
+            apiServiceApi.getMovieList(type, page)
                 .subscribeOn(Schedulers.io())
                 .subscribe(
                     {
@@ -52,7 +52,7 @@ class MovieDataSource(
         networkState.postValue(NetworkState.LOADING)
 
         compositeDisposable.add(
-            apiServiceApi.getMovieList(params.key)
+            apiServiceApi.getMovieList(type, params.key)
                 .subscribeOn(Schedulers.io())
                 .subscribe(
                     {

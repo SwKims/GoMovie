@@ -20,6 +20,12 @@
         <item name="android:textSize">15sp</item>
     </style>
 
+    <style name="MovieDetailTitle2">
+        <item name="android:textColor">@color/detailTextColor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
     <style name="MovieDetails">
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">bold</item>
@@ -32,5 +38,21 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+    <style name="CircleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="CastName">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="CastCharacterName">
+        <item name="android:textColor">@color/grey2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
 
 </resources>

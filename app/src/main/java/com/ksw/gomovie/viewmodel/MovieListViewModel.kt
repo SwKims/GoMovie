@@ -13,14 +13,14 @@ import io.reactivex.disposables.CompositeDisposable
  */
 
 class MovieListViewModel(
-    private val movieRepository: MoviePagedListRepository
-//    private val type: String
+    private val movieRepository: MoviePagedListRepository,
+    private val type: String
 ) : ViewModel() {
 
     private val compositeDisposable = CompositeDisposable()
 
     val moviePagedList: LiveData<PagedList<Movie>> by lazy {
-        movieRepository.loadMovieList(compositeDisposable)
+        movieRepository.loadMovieList(compositeDisposable, type)
     }
 
     val networkState: LiveData<NetworkState> by lazy {

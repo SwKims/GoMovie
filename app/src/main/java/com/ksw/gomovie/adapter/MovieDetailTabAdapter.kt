@@ -4,6 +4,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.ksw.gomovie.fragment.MovieAboutFragment
+import com.ksw.gomovie.fragment.MovieCastFragment
+import com.ksw.gomovie.fragment.MovieCrewFragment
 
 /**
  * Created by KSW on 2021-02-24
@@ -20,10 +22,10 @@ class MovieDetailTabAdapter(
                 return MovieAboutFragment(movieId)
             }
             1 -> {
-                return MovieAboutFragment(movieId)
+                return MovieCastFragment(movieId)
             }
             2 -> {
-                return MovieAboutFragment(movieId)
+                return MovieCrewFragment(movieId)
             }
         }
         return MovieAboutFragment(movieId)

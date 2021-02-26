@@ -13,6 +13,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#474f5a</color>
     <color name="detailTextColor">#489CCF</color>
+    <color name="detailTextColor2">#41B7FF</color>
     <color name="expandText">#00000000</color>
     <color name="yellow">#FDD835</color>
+    <color name="grey2">#515151</color>
+    <color name="movieDetailTab">#00897B</color>
+
+
 </resources>

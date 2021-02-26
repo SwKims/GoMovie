@@ -21,10 +21,10 @@ class MoviePagedListRepository(private val apiServiceApi: MovieServiceApi) {
 
     fun loadMovieList(
         compositeDisposable: CompositeDisposable,
-//        type: String
+        type: String
     ): LiveData<PagedList<Movie>> {
 
-        movieDataSourceFactory = MovieDataSourceFactory(apiServiceApi, compositeDisposable)
+        movieDataSourceFactory = MovieDataSourceFactory(apiServiceApi, compositeDisposable, type)
         val config = PagedList.Config
             .Builder()
             .setEnablePlaceholders(false)

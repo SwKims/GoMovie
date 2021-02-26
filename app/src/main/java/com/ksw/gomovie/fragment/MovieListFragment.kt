@@ -53,18 +53,18 @@ class MovieListFragment(private val type: String) : Fragment() {
 
         val apiService: MovieServiceApi = NetworkModule.getClient()
         moviePagedListRepository = MoviePagedListRepository(apiService)
-        movieListViewModel = movieListViewModel()
+        movieListViewModel = movieListViewModel(type)
         populatingViews()
 
         return binding.root
     }
 
 
-    private fun movieListViewModel(): MovieListViewModel {
+    private fun movieListViewModel(type: String): MovieListViewModel {
         return ViewModelProvider(this, object : ViewModelProvider.Factory {
             override fun <T : ViewModel?> create(modelClass: Class<T>): T {
                 @Suppress("UNCHECKED_CAST")
-                return MovieListViewModel(moviePagedListRepository) as T
+                return MovieListViewModel(moviePagedListRepository, type) as T
             }
         })[MovieListViewModel::class.java]
     }

@@ -1,4 +1,4 @@
-package com.ksw.gomovie.model
+package com.ksw.gomovie.model.response
 
 import com.google.gson.annotations.SerializedName
 import com.ksw.gomovie.model.main.Movie

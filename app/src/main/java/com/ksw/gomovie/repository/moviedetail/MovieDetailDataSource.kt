@@ -2,8 +2,9 @@ package com.ksw.gomovie.repository.moviedetail
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.ksw.gomovie.model.VideoResponse
+import com.ksw.gomovie.model.response.VideoResponse
 import com.ksw.gomovie.model.main.MovieDetail
+import com.ksw.gomovie.model.response.CastResponse
 import com.ksw.gomovie.network.MovieServiceApi
 import com.ksw.gomovie.network.NetworkState
 import io.reactivex.disposables.CompositeDisposable
@@ -30,6 +31,10 @@ class MovieDetailDataSource(
     private val _movieVideoResponse = MutableLiveData<VideoResponse>()
     val movieVideoResponse: LiveData<VideoResponse>
         get() = _movieVideoResponse
+
+    private val _movieCastResponse = MutableLiveData<CastResponse>()
+    val movieCastResponse: LiveData<CastResponse>
+        get() = _movieCastResponse
 
     fun loadMovieDetails(movieId: Int) {
         _networkState.postValue(NetworkState.LOADING)
@@ -74,5 +79,29 @@ class MovieDetailDataSource(
 
         }
     }
+
+    fun loadCastDetails(movieId: Int) {
+        _networkState.postValue(NetworkState.LOADING)
+
+        try {
+            apiServiceApi.getMovieCast(movieId)
+                .subscribeOn(Schedulers.io())
+                .subscribe(
+                    {
+                        _movieCastResponse.postValue(it)
+                        _networkState.postValue(NetworkState.LOADED)
+                    },
+                    {
+                        _networkState.postValue(NetworkState.ERROR)
+                    }
+                ).let {
+                    compositeDisposable.add(it)
+                }
+        } catch (e: Exception) {
+
+        }
+    }
+
+
 
 }
