@@ -81,7 +81,7 @@ class MoviePageListAdapter(private val context: Context) :
         fun bindMovieData(movie: Movie?, context: Context) {
 
             binding.tvMovieTitle.text = movie?.title
-            binding.tvRating.text = "\uD83C\uDF1F " + movie?.voteAverage.toString()
+            binding.tvRating.text = "⭐ " + movie?.voteAverage.toString()
 
             if (!movie?.posterPath.isNullOrEmpty()) {
                 val posterUrl = IMAGE_BASE_URL + movie?.posterPath

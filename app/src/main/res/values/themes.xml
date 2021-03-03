@@ -55,4 +55,10 @@
         <item name="android:textSize">15sp</item>
     </style>
 
+    <style name="MovieSearch">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
 </resources>

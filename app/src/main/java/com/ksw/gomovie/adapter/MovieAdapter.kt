@@ -1,7 +1,6 @@
 package com.ksw.gomovie.adapter
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -37,7 +36,8 @@ class MovieAdapter(private val movies: List<Movie>) :
         @SuppressLint("SetTextI18n")
         fun bind(movies: Movie) {
             binding.tvMovieTitle.text = movies.title
-            binding.tvRating.text = "\uD83C\uDF1F " + movies.voteAverage.toString()
+            binding.tvRating.text = "⭐ " + movies.voteAverage.toString()
+
 
             if (movies.posterPath.isNotEmpty()) {
                 val postUrl = IMAGE_BASE_URL + movies.posterPath

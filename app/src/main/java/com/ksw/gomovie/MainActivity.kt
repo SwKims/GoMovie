@@ -11,6 +11,7 @@ import com.gauravk.bubblenavigation.BubbleNavigationConstraintView
 import com.ksw.gomovie.databinding.ActivityMainBinding
 import com.ksw.gomovie.fragment.ErrorFragment
 import com.ksw.gomovie.fragment.MovieFragment
+import com.ksw.gomovie.fragment.MovieSearchFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var transaction: FragmentTransaction
     lateinit var movieFragment: MovieFragment
     lateinit var errorFragment: ErrorFragment
+    lateinit var searchFragment: MovieSearchFragment
 
     /*lateinit var toolbar: Toolbar
     lateinit var bottomBar: BubbleNavigationConstraintView*/
@@ -35,8 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         movieFragment = MovieFragment()
         errorFragment = ErrorFragment()
-
-
+        searchFragment = MovieSearchFragment()
 
 
 
@@ -72,7 +73,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 3 -> {
                     if (isNetworkAvailable()) {
-                        setFragment(movieFragment)
+                        setFragment(searchFragment)
                     } else {
                         setFragment(errorFragment)
                     }

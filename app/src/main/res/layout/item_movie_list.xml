@@ -11,6 +11,7 @@
         android:id="@+id/movieCard"
         android:layout_width="match_parent"
         android:layout_height="180dp"
+        android:transitionName="imageTransition"
         app:cardCornerRadius="8dp">
 
         <ImageView
@@ -44,12 +45,12 @@
     <TextView
         android:id="@+id/tv_movieTitle"
         android:layout_width="wrap_content"
-        android:textColor="@color/white"
         android:layout_height="36dp"
-        android:layout_margin="4dp"
         android:layout_gravity="center"
+        android:layout_margin="4dp"
         android:ellipsize="end"
-        android:maxLines="1" />
+        android:maxLines="1"
+        android:textColor="@color/white" />
 
 
 </LinearLayout>

@@ -75,7 +75,8 @@
             app:bt_colorActive="@color/white"
             app:bt_colorInactive="@color/colorAccent"
             app:bt_shape="@drawable/transition_background_drawable"
-            app:bt_title="Watchlist" />
+            app:bt_icon="@drawable/ic_search"
+            app:bt_title="Search" />
 
         <com.gauravk.bubblenavigation.BubbleToggleView
             android:id="@+id/l_item_search"
@@ -84,7 +85,7 @@
             app:bt_colorActive="@color/white"
             app:bt_colorInactive="@color/colorAccent"
             app:bt_shape="@drawable/transition_background_drawable"
-            app:bt_title="Search" />
+            app:bt_title="Info" />
 
     </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
 

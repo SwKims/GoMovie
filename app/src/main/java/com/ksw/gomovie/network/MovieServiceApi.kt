@@ -39,5 +39,9 @@ interface MovieServiceApi {
         @Path("id") movieId: Int
     ): Single<CastResponse>
 
+    @GET("search/movie")
+    fun getSearchResults(
+        @Query("query") query: String
+    ): Single<MovieResponse>
 
 }
