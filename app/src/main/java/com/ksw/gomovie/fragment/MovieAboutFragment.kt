@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.ksw.gomovie.adapter.MovieGenreListAdapter
 import com.ksw.gomovie.adapter.TrailerListAdapter
 import com.ksw.gomovie.databinding.MovieDetailAboutBinding
 import com.ksw.gomovie.model.detail.*
@@ -29,6 +30,7 @@ class MovieAboutFragment(private var movieId: Int) : Fragment() {
     private lateinit var movieDetailRepository: MovieDetailRepository
 
     private lateinit var trailerAdapter: TrailerListAdapter
+    private lateinit var movieGenreListAdapter: MovieGenreListAdapter
 
     private lateinit var movieBackdrop: List<BackDrop>
     private lateinit var moviePoster: List<Poster>
@@ -87,7 +89,23 @@ class MovieAboutFragment(private var movieId: Int) : Fragment() {
             } else {
                 binding.tvProductionCountries.text = "-"
             }
+
+            if (!it.genres.isNullOrEmpty()) {
+                movieGenreListAdapter = MovieGenreListAdapter(
+                    it.genres, binding.root.context
+                )
+
+                val linearLayoutManager2 = LinearLayoutManager(activity)
+                linearLayoutManager2.orientation = LinearLayoutManager.HORIZONTAL
+                binding.rvMovieGenre.layoutManager = linearLayoutManager2
+                binding.rvMovieGenre.setHasFixedSize(true)
+                binding.rvMovieGenre.adapter = movieGenreListAdapter
+            } else {
+                binding.genres.visibility = View.GONE
+            }
+
         }
+
 
         movieDetailViewModel.videoDetails.observe(viewLifecycleOwner) {
 

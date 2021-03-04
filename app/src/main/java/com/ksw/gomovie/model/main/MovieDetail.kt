@@ -17,7 +17,7 @@ data class MovieDetail(
     /*@SerializedName("belongs_to_collection")
     val belongsToCollection: CollectionResponse,*/
     val budget: String,
-//    val genres: ArrayList<Genre>,
+    val genres: ArrayList<Genre>,
     val homepage: String,
     val id: Int,
     @SerializedName("imdb_id")

@@ -4,6 +4,7 @@ import com.ksw.gomovie.model.response.MovieResponse
 import com.ksw.gomovie.model.response.VideoResponse
 import com.ksw.gomovie.model.main.MovieDetail
 import com.ksw.gomovie.model.response.CastResponse
+import com.ksw.gomovie.model.response.GenresResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -43,5 +44,8 @@ interface MovieServiceApi {
     fun getSearchResults(
         @Query("query") query: String
     ): Single<MovieResponse>
+
+    @GET("genre/movie/list")
+    fun getMovieGenresList(): Single<GenresResponse>
 
 }
