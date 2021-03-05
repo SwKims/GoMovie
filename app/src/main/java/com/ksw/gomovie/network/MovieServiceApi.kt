@@ -1,10 +1,8 @@
 package com.ksw.gomovie.network
 
-import com.ksw.gomovie.model.response.MovieResponse
-import com.ksw.gomovie.model.response.VideoResponse
+import com.ksw.gomovie.model.detail.PeopleDetail
 import com.ksw.gomovie.model.main.MovieDetail
-import com.ksw.gomovie.model.response.CastResponse
-import com.ksw.gomovie.model.response.GenresResponse
+import com.ksw.gomovie.model.response.*
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -18,12 +16,12 @@ interface MovieServiceApi {
 
     @GET("movie/{type}?region=kr")
     fun getMovieList(
-            @Path("type") type: String,
-            @Query("page") page: Int
+        @Path("type") type: String,
+        @Query("page") page: Int
     ): Single<MovieResponse>
 
-   /* @GET("movie/popular")
-    fun getMovieList(@Query("page") page : Int) : Single<MovieResponse>*/
+    /* @GET("movie/popular")
+     fun getMovieList(@Query("page") page : Int) : Single<MovieResponse>*/
 
     @GET("movie/{movie_id}")
     fun getMovieDetails(
@@ -47,5 +45,15 @@ interface MovieServiceApi {
 
     @GET("genre/movie/list")
     fun getMovieGenresList(): Single<GenresResponse>
+
+    @GET("movie/{movie_id}/recommendations")
+    fun getMovieRecommendations(
+        @Path("movie_id") movieId: Int
+    ): Single<MovieResponse>
+
+    @GET("person/{id}")
+    fun getPeopleDetails(
+        @Path("id") id: Int
+    ): Single<PeopleDetail>
 
 }

@@ -32,6 +32,12 @@
         <item name="android:textSize">15sp</item>
     </style>
 
+    <style name="MovieDetails2">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
     <style name="VideoTitle">
         <item name="android:textColor">@color/yellow</item>
         <item name="android:textStyle">bold</item>
@@ -66,6 +72,12 @@
         <item name="android:textStyle">bold</item>
         <item name="alpha">0.7</item>
         <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="PeopleName">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25sp</item>
     </style>
 
 </resources>

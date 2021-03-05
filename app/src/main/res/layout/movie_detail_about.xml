@@ -224,6 +224,35 @@
         </LinearLayout>
 
 
+      <!--  <LinearLayout
+            android:id="@+id/recommend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="추천영화"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/MovieDetailTitle2" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recommendRecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp" />
+
+
+        </LinearLayout>
+-->
+
+
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

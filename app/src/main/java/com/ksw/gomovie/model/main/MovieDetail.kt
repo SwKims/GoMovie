@@ -1,10 +1,13 @@
 package com.ksw.gomovie.model.main
 
+import androidx.room.Ignore
+import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import com.ksw.gomovie.model.detail.ProductionCompany
 import com.ksw.gomovie.model.detail.ProductionCountry
 import com.ksw.gomovie.model.detail.SpokenLanguage
 import com.ksw.gomovie.model.response.ImageResponse
+import com.ksw.gomovie.model.response.SimilarResponse
 
 /**
  * Created by KSW on 2021-02-24
@@ -48,5 +51,9 @@ data class MovieDetail(
     val voteAverage: Double,
     @SerializedName("vote_count")
     val voteCount: Int,
-    var images: ImageResponse? = null
+    var images: ImageResponse? = null,
+
+    @Ignore
+    @Expose
+    var similar: SimilarResponse? = null
 )

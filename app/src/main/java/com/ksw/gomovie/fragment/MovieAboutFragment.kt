@@ -10,13 +10,18 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ksw.gomovie.adapter.MovieGenreListAdapter
+import com.ksw.gomovie.adapter.MovieRecommendAdapter
 import com.ksw.gomovie.adapter.TrailerListAdapter
 import com.ksw.gomovie.databinding.MovieDetailAboutBinding
 import com.ksw.gomovie.model.detail.*
 import com.ksw.gomovie.network.MovieServiceApi
 import com.ksw.gomovie.network.NetworkModule
+import com.ksw.gomovie.repository.movie.MoviePagedListRepository
 import com.ksw.gomovie.repository.moviedetail.MovieDetailRepository
+import com.ksw.gomovie.repository.recommend.MovieRecommendRepository
 import com.ksw.gomovie.viewmodel.MovieDetailViewModel
+import com.ksw.gomovie.viewmodel.MovieListViewModel
+import com.ksw.gomovie.viewmodel.MovieRecommendViewModel
 
 /**
  * Created by KSW on 2021-02-24
@@ -27,9 +32,12 @@ class MovieAboutFragment(private var movieId: Int) : Fragment() {
 //    private val binding get() = _binding
 
     private lateinit var movieDetailViewModel: MovieDetailViewModel
+    private lateinit var movieRecommendViewModel: MovieRecommendViewModel
     private lateinit var movieDetailRepository: MovieDetailRepository
+    private lateinit var movieMovieRecommendRepository: MovieRecommendRepository
 
     private lateinit var trailerAdapter: TrailerListAdapter
+    private lateinit var movieRecommendAdapter: MovieRecommendAdapter
     private lateinit var movieGenreListAdapter: MovieGenreListAdapter
 
     private lateinit var movieBackdrop: List<BackDrop>
@@ -45,6 +53,8 @@ class MovieAboutFragment(private var movieId: Int) : Fragment() {
 
         val apiServiceApi: MovieServiceApi = NetworkModule.getClient()
         movieDetailRepository = MovieDetailRepository(apiServiceApi)
+        movieMovieRecommendRepository = MovieRecommendRepository(apiServiceApi)
+
         movieDetailViewModel = getViewModel(movieId)
         populatingViews()
 
@@ -126,6 +136,25 @@ class MovieAboutFragment(private var movieId: Int) : Fragment() {
             }
         }
 
+       /* movieRecommendViewModel.movieRecommendDetails.observe(viewLifecycleOwner) {
+
+            if (!it.movieList.isNullOrEmpty()) {
+                MovieRecommendAdapter(
+                    it.movieList,
+                    binding.root.context
+                )
+
+                val linearLayoutManager3 = LinearLayoutManager(activity)
+                linearLayoutManager3.orientation = LinearLayoutManager.HORIZONTAL
+
+                binding.recommendRecyclerview.layoutManager = linearLayoutManager3
+                binding.recommendRecyclerview.setHasFixedSize(true)
+                binding.recommendRecyclerview.adapter = movieRecommendAdapter
+            } else {
+                binding.recommendRecyclerview.visibility = View.GONE
+            }
+
+        }*/
 
     }
 
@@ -138,6 +167,20 @@ class MovieAboutFragment(private var movieId: Int) : Fragment() {
             }
         })[MovieDetailViewModel::class.java]
     }
+
+    /*private fun getViewModel2(type: String): MovieListViewModel {
+        return ViewModelProvider(this, object : ViewModelProvider.Factory {
+            override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+                @Suppress("UNCHECKED_CAST")
+                return MovieListViewModel(MoviePagedListRepository, type) as T
+            }
+        })[MovieListViewModel::class.java]
+    }*/
+
+
+
+
+
 }
 
 

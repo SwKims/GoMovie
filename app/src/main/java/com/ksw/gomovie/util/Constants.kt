@@ -16,5 +16,6 @@ class Constants {
         const val TRAILER_THUMBNAIL_END_URL = "/0.jpg"
         const val MOVIE_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
         var homePage = ""
+        const val MOVIE_TYPE = "movie"
     }
 }

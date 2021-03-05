@@ -18,6 +18,7 @@
     <color name="yellow">#FDD835</color>
     <color name="grey2">#515151</color>
     <color name="movieDetailTab">#00897B</color>
+    <color name="transparent">#00000000</color>
 
 
 </resources>
