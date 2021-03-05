@@ -3,6 +3,7 @@ package com.ksw.gomovie.repository.cast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.ksw.gomovie.model.detail.PeopleDetail
+import com.ksw.gomovie.model.main.PeopleImages
 import com.ksw.gomovie.network.MovieServiceApi
 import com.ksw.gomovie.network.NetworkState
 import io.reactivex.disposables.CompositeDisposable
@@ -26,6 +27,10 @@ class CastDetailDataSource(
     val peopleDetailResponse: LiveData<PeopleDetail>
         get() = _peopleDetailResponse
 
+    private val _peopleImages = MutableLiveData<PeopleImages>()
+    val peopleImages: LiveData<PeopleImages>
+        get() = _peopleImages
+
     fun loadPeopleDetails(peopleId: Int) {
         _networkState.postValue(NetworkState.LOADING)
 
@@ -35,6 +40,28 @@ class CastDetailDataSource(
                 .subscribe(
                     {
                         _peopleDetailResponse.postValue(it)
+                        _networkState.postValue(NetworkState.LOADED)
+                    },
+                    {
+                        _networkState.postValue(NetworkState.ERROR)
+                    }
+                )?.let {
+                    compositeDisposable.add(it)
+                }
+        } catch (e: Exception) {
+
+        }
+    }
+
+    fun loadPeopleImages(peopleId: Int) {
+        _networkState.postValue(NetworkState.LOADING)
+
+        try {
+            apiServiceApi.getPeopleImages(peopleId)
+                .subscribeOn(Schedulers.io())
+                .subscribe(
+                    {
+                        _peopleImages.postValue(it)
                         _networkState.postValue(NetworkState.LOADED)
                     },
                     {

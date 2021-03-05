@@ -14,9 +14,9 @@
             android:layout_height="wrap_content"
             android:background="@color/black"
             app:tabGravity="fill"
-            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorColor="@color/movieDetailTab"
             app:tabMode="scrollable"
-            app:tabSelectedTextColor="@color/white"
+            app:tabSelectedTextColor="@color/movieDetailTab"
             app:tabTextColor="@color/colorAccent" />
 
     </com.google.android.material.appbar.AppBarLayout>

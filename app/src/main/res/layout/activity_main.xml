@@ -44,8 +44,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:bt_active="true"
-            app:bt_colorActive="@color/white"
+            app:bt_colorActive="@color/black"
             app:bt_colorInactive="@color/colorAccent"
+            app:bt_icon="@drawable/ic_movie"
             app:bt_shape="@drawable/transition_background_drawable"
             app:bt_title="Movies"
             app:bt_titleSize="16sp" />
@@ -54,8 +55,9 @@
             android:id="@+id/l_item_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:bt_colorActive="@color/white"
+            app:bt_colorActive="@color/black"
             app:bt_colorInactive="@color/colorAccent"
+            app:bt_icon="@drawable/ic_tv"
             app:bt_shape="@drawable/transition_background_drawable"
             app:bt_title="Shows" />
 
@@ -63,27 +65,29 @@
             android:id="@+id/l_item_discover"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:bt_colorActive="@color/white"
+            app:bt_colorActive="@color/black"
             app:bt_colorInactive="@color/colorAccent"
+            app:bt_icon="@drawable/ic_favorite"
             app:bt_shape="@drawable/transition_background_drawable"
-            app:bt_title="Discover" />
+            app:bt_title="Favorite" />
 
         <com.gauravk.bubblenavigation.BubbleToggleView
             android:id="@+id/l_item_watchlist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:bt_colorActive="@color/white"
+            app:bt_colorActive="@color/black"
             app:bt_colorInactive="@color/colorAccent"
-            app:bt_shape="@drawable/transition_background_drawable"
             app:bt_icon="@drawable/ic_search"
+            app:bt_shape="@drawable/transition_background_drawable"
             app:bt_title="Search" />
 
         <com.gauravk.bubblenavigation.BubbleToggleView
             android:id="@+id/l_item_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:bt_colorActive="@color/white"
+            app:bt_colorActive="@color/black"
             app:bt_colorInactive="@color/colorAccent"
+            app:bt_icon="@drawable/ic_info"
             app:bt_shape="@drawable/transition_background_drawable"
             app:bt_title="Info" />
 

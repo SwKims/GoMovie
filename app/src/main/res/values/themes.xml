@@ -80,4 +80,10 @@
         <item name="android:textSize">25sp</item>
     </style>
 
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="android:colorControlNormal">@color/grey</item>
+        <item name="android:colorControlActivated">@color/yellow2</item>
+
+    </style>
+
 </resources>

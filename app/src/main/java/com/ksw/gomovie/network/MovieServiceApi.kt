@@ -2,6 +2,7 @@ package com.ksw.gomovie.network
 
 import com.ksw.gomovie.model.detail.PeopleDetail
 import com.ksw.gomovie.model.main.MovieDetail
+import com.ksw.gomovie.model.main.PeopleImages
 import com.ksw.gomovie.model.response.*
 import io.reactivex.Single
 import retrofit2.http.GET
@@ -55,5 +56,10 @@ interface MovieServiceApi {
     fun getPeopleDetails(
         @Path("id") id: Int
     ): Single<PeopleDetail>
+
+    @GET("person/{id}/images")
+    fun getPeopleImages(
+        @Path("id") id: Int
+    ): Single<PeopleImages>
 
 }
