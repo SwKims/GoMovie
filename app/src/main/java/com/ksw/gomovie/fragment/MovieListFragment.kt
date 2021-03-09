@@ -25,16 +25,13 @@ import com.ksw.gomovie.viewmodel.MovieListViewModel
 
 class MovieListFragment(private val type: String) : Fragment() {
 
-    private var _binding: MovieListFragmentBinding? = null
-    private val binding get() = _binding!!
+    /*private var _binding: MovieListFragmentBinding? = null
+    private val binding get() = _binding!!*/
+    private lateinit var binding: MovieListFragmentBinding
 
     //    private lateinit var rootView : View
     private lateinit var movieAdapter: MoviePageListAdapter
     private lateinit var movieListViewModel: MovieListViewModel
-
-    lateinit var movieView: RecyclerView
-    lateinit var mainProgressBar: ProgressBar
-
     lateinit var moviePagedListRepository: MoviePagedListRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,12 +41,14 @@ class MovieListFragment(private val type: String) : Fragment() {
         )
     }
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = MovieListFragmentBinding.inflate(inflater, container, false)
+        binding = MovieListFragmentBinding.inflate(inflater, container, false)
 
         val apiService: MovieServiceApi = NetworkModule.getClient()
         moviePagedListRepository = MoviePagedListRepository(apiService)
@@ -58,6 +57,7 @@ class MovieListFragment(private val type: String) : Fragment() {
 
         return binding.root
     }
+
 
 
     private fun movieListViewModel(type: String): MovieListViewModel {
@@ -98,5 +98,7 @@ class MovieListFragment(private val type: String) : Fragment() {
             }
         }
     }
+
+
 
 }

@@ -41,7 +41,7 @@ class CastAboutFragment(private val castId: Int) : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         binding = CastAboutFragmentBinding.inflate(inflater, container, false)
 

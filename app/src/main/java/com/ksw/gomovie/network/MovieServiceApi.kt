@@ -1,5 +1,6 @@
 package com.ksw.gomovie.network
 
+import com.ksw.gomovie.model.detail.MovieCredits
 import com.ksw.gomovie.model.detail.PeopleDetail
 import com.ksw.gomovie.model.main.MovieDetail
 import com.ksw.gomovie.model.main.PeopleImages
@@ -61,5 +62,10 @@ interface MovieServiceApi {
     fun getPeopleImages(
         @Path("id") id: Int
     ): Single<PeopleImages>
+
+    @GET("person/{id}/movie_credits")
+    fun getMovieCredits(
+        @Path("id") id: Int
+    ): Single<MovieCredits>
 
 }

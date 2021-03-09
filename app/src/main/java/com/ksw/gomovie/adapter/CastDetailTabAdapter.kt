@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.ksw.gomovie.fragment.CastAboutFragment
+import com.ksw.gomovie.fragment.CastMovieFragment
 
 /**
  * Created by KSW on 2021-03-05

@@ -31,8 +31,9 @@ import kotlin.jvm.Throws
  */
 class MovieSearchFragment : Fragment() {
 
-    private var _binding: MovieSearchFragmentBinding? = null
-    private val binding get() = _binding!!
+    /*private var _binding: MovieSearchFragmentBinding? = null
+    private val binding get() = _binding!!*/
+    private lateinit var binding: MovieSearchFragmentBinding
 
     private lateinit var searchAdapter: MovieSearchAdapter
     private val disposable = CompositeDisposable()
@@ -55,7 +56,7 @@ class MovieSearchFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = MovieSearchFragmentBinding.inflate(inflater, container, false)
+        binding = MovieSearchFragmentBinding.inflate(inflater, container, false)
         val linearLayoutManager = GridLayoutManager(activity, 2)
         linearLayoutManager.reverseLayout = false
         binding.rvSearchView.layoutManager = linearLayoutManager

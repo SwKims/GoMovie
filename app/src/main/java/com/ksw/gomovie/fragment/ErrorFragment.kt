@@ -13,8 +13,9 @@ import com.ksw.gomovie.databinding.NetworkErrorBinding
 
 class ErrorFragment: Fragment() {
 
-    private var _binding: NetworkErrorBinding?= null
-    private val binding get() = _binding!!
+    /*private var _binding: NetworkErrorBinding?= null
+    private val binding get() = _binding!!*/
+    private lateinit var binding: NetworkErrorBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,7 +23,7 @@ class ErrorFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = NetworkErrorBinding.inflate(inflater, container, false)
+        binding = NetworkErrorBinding.inflate(inflater, container, false)
 
 
         return binding.root

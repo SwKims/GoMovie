@@ -3,14 +3,14 @@ package com.ksw.gomovie
 import android.content.Context
 import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import com.gauravk.bubblenavigation.BubbleNavigationConstraintView
 import com.ksw.gomovie.databinding.ActivityMainBinding
+import com.ksw.gomovie.databinding.MovieMainFragmentBinding
 import com.ksw.gomovie.fragment.ErrorFragment
 import com.ksw.gomovie.fragment.MovieFragment
+import com.ksw.gomovie.fragment.MovieListFragment
 import com.ksw.gomovie.fragment.MovieSearchFragment
 
 class MainActivity : AppCompatActivity() {
@@ -38,6 +38,8 @@ class MainActivity : AppCompatActivity() {
         movieFragment = MovieFragment()
         errorFragment = ErrorFragment()
         searchFragment = MovieSearchFragment()
+
+
 
 
 
@@ -94,10 +96,18 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
     private fun setFragment(fragment: Fragment) {
+
+//        supportFragmentManager.fragmentFactory.instantiate(classLoader, MovieListFragment::class.java.name)
+
         transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.tv_test, fragment)
         transaction.commit()
+
+        /*supportFragmentManager.beginTransaction()
+            .replace(R.id.tv_test, fragment)
+            .commitNow()*/
 
     }
 

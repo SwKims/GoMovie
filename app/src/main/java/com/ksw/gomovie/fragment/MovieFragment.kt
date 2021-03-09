@@ -15,8 +15,9 @@ import com.ksw.gomovie.databinding.MovieMainFragmentBinding
 
 class MovieFragment: Fragment() {
 
-    private var _binding: MovieMainFragmentBinding?= null
-    private val binding get() = _binding!!
+    /*private var _binding: MovieMainFragmentBinding?= null
+    private val binding get() = _binding!!*/
+    private lateinit var binding: MovieMainFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,7 +25,7 @@ class MovieFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = MovieMainFragmentBinding.inflate(inflater, container, false)
+        binding = MovieMainFragmentBinding.inflate(inflater, container, false)
         binding.tabMovie.addTab(binding.tabMovie.newTab().setText("Now Playing"))
         binding.tabMovie.addTab(binding.tabMovie.newTab().setText("Popular"))
         binding.tabMovie.addTab(binding.tabMovie.newTab().setText("Top Rated"))

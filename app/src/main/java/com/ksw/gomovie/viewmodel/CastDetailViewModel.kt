@@ -2,6 +2,7 @@ package com.ksw.gomovie.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
+import com.ksw.gomovie.model.detail.MovieCredits
 import com.ksw.gomovie.model.detail.PeopleDetail
 import com.ksw.gomovie.model.main.PeopleImages
 import com.ksw.gomovie.repository.cast.CastDetailRepository
@@ -26,6 +27,9 @@ class CastDetailViewModel(
         castDetailRepository.loadingPeopleImages(compositeDisposable, peopleId)
     }
 
+    val movieCredits: LiveData<MovieCredits> by lazy {
+        castDetailRepository.loadingMovieCredits(compositeDisposable, peopleId)
+    }
 
 
     override fun onCleared() {

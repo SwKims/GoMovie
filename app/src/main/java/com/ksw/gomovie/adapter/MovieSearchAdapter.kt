@@ -72,7 +72,7 @@ class MovieSearchAdapter(private val movies: ArrayList<Movie>, private val conte
                 intent.putExtra("id", itemSearch?.id)
                 val options = ActivityOptions.makeSceneTransitionAnimation(
                     context as Activity?,
-                    Pair<View, String>(binding.movieCard, "imageTransition")
+                    Pair(binding.movieCard, "imageTransition")
                 )
                 context.startActivity(intent, options.toBundle())
 
