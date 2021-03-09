@@ -15,7 +15,6 @@
             android:id="@+id/movie_detail_toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
             app:contentScrim="@color/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
@@ -29,7 +28,7 @@
                 <ImageView
                     android:id="@+id/iv_movie_detailImage"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="250dp"
                     android:background="@color/colorPrimary"
                     android:scaleType="center"
                     tools:ignore="ContentDescription" />
@@ -47,7 +46,8 @@
 -->
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="200dp" />
+                    android:layout_height="270dp"
+                    android:background="@drawable/backdrop" />
 
                 <TextView
                     android:id="@+id/tv_movie_detailTitle"
@@ -136,11 +136,18 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
                     android:layout_marginEnd="11dp"
-                    android:layout_marginBottom="-2dp"
                     android:text="홈페이지"
                     android:textColor="@color/white" />
 
             </RelativeLayout>
+
+            <include
+                android:id="@+id/toolbar_detail"
+                layout="@layout/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:titleTextColor="@color/white" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 

@@ -13,4 +13,90 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <!-- dark theme add -->
+      <style name="MovieDetailTitle">
+        <item name="android:textColor">@color/detailTextColor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="MovieDetailTitle2">
+        <item name="android:textColor">@color/detailTextColor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="MovieDetails">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="MovieDetails2">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="VideoTitle">
+        <item name="android:textColor">@color/yellow</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CircleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="CastName">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="CastCharacterName">
+        <item name="android:textColor">@color/grey2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="MovieSearch">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="MovieGenre">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="alpha">0.7</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="PeopleName">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="android:colorControlNormal">@color/grey</item>
+        <item name="android:colorControlActivated">@color/yellow2</item>
+    </style>
+
+    <style name="ToolBarStyle" parent="Theme.GoMovie">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="windowActionBar">false</item>
+        <item name="titleTextAppearance">@style/HeaderTheme</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="HeaderTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
 </resources>

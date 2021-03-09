@@ -3,6 +3,7 @@ package com.ksw.gomovie.activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.Menu
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
+import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.tabs.TabLayout
 import com.ksw.gomovie.R
 import com.ksw.gomovie.adapter.MovieDetailImageSlideAdapter
@@ -17,6 +19,7 @@ import com.ksw.gomovie.adapter.MovieDetailTabAdapter
 import com.ksw.gomovie.databinding.MovieDetailBinding
 import com.ksw.gomovie.model.detail.Image
 import com.ksw.gomovie.model.detail.Poster
+import com.ksw.gomovie.model.main.Movie
 import com.ksw.gomovie.model.main.MovieDetail
 import com.ksw.gomovie.model.main.PeopleProfileImages
 import com.ksw.gomovie.network.MovieServiceApi
@@ -74,6 +77,8 @@ class MovieDetailActivity : AppCompatActivity() {
         )
 
         viewModel.movieDetails.observe(this, Observer {
+
+            setupToolbar(it.title)
 
             binding.tvMovieDetailTitle.text = it.title
 
@@ -137,6 +142,45 @@ class MovieDetailActivity : AppCompatActivity() {
         })
 
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.detail_menu, menu)
+        super.onCreateOptionsMenu(menu)
+        return true
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
+    private fun setupToolbar(title: String) {
+        setSupportActionBar(binding.toolbarDetail.root)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_back)
+
+        binding.movieDetailAppBar.addOnOffsetChangedListener(object : AppBarLayout.OnOffsetChangedListener{
+            var isShow = true
+            var scrollRange = -1
+
+            override fun onOffsetChanged(appBarLayout: AppBarLayout, verticalOffset: Int) {
+                if (scrollRange == -1 ) {
+                    scrollRange = appBarLayout.totalScrollRange
+                }
+                if (scrollRange + verticalOffset == 0) {
+                    binding.movieDetailToolbar.title = title
+                    binding.movieDetailToolbar.setCollapsedTitleTextColor(resources.getColor(R.color.white))
+                    isShow = true
+                } else if (isShow) {
+                    binding.movieDetailToolbar.title = " "
+                    isShow = false
+                }
+            }
+
+        })
+
+    }
+
 
     private fun openMovieSite() {
         if (homePage == "") {
