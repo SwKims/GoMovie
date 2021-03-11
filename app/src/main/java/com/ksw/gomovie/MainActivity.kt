@@ -8,10 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.ksw.gomovie.databinding.ActivityMainBinding
 import com.ksw.gomovie.databinding.MovieMainFragmentBinding
-import com.ksw.gomovie.fragment.ErrorFragment
-import com.ksw.gomovie.fragment.MovieFragment
-import com.ksw.gomovie.fragment.MovieListFragment
-import com.ksw.gomovie.fragment.MovieSearchFragment
+import com.ksw.gomovie.fragment.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var movieFragment: MovieFragment
     lateinit var errorFragment: ErrorFragment
     lateinit var searchFragment: MovieSearchFragment
+    lateinit var infoFragment: InfoFragment
 
     /*lateinit var toolbar: Toolbar
     lateinit var bottomBar: BubbleNavigationConstraintView*/
@@ -38,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         movieFragment = MovieFragment()
         errorFragment = ErrorFragment()
         searchFragment = MovieSearchFragment()
-
+        infoFragment = InfoFragment()
 
 
 
@@ -82,7 +80,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 4 -> {
                     if (isNetworkAvailable()) {
-                        setFragment(movieFragment)
+                        setFragment(infoFragment)
                     } else {
                         setFragment(errorFragment)
                     }

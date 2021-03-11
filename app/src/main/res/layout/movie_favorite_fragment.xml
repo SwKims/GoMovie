@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="favoriteEntity"
+            type="com.ksw.gomovie.database.FavoritesEntity" />
+    </data>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/list_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/favoriteMovie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_movie_favoritePoster"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:contentDescription="poster"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+                <TextView
+                    android:id="@+id/tv_movie_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/img_star"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_movie_favoritePoster"
+                    tools:text="영화제목" />
+
+                <TextView
+                    android:id="@+id/tv_movie_overview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:alpha="0.7"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_movie_title"
+                    tools:text="@tools:sample/lorem/random" />
+
+                <ImageView
+                    android:id="@+id/img_star"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="Star"
+                    android:src="@drawable/ic_search"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_movie_rating"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_movie_rating"
+                    app:layout_constraintTop_toTopOf="@+id/tv_movie_rating" />
+
+                <TextView
+                    android:id="@+id/tv_movie_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_movie_favoritePoster"
+                    tools:text="7.7" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+</layout>

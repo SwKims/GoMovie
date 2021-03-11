@@ -48,7 +48,7 @@ class CastMovieFragment(private val castId: Int): Fragment() {
             if (!it.cast.isNullOrEmpty()) {
                 movieAdapter =
                     MovieAdapter(
-                        it.cast, context!!
+                        it.cast, requireContext()
                     )
                 val layoutManager = GridLayoutManager(activity, 3)
                 binding.rvMovieCredits.layoutManager = layoutManager

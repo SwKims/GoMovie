@@ -17,5 +17,9 @@ class Constants {
         const val MOVIE_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
         var homePage = ""
         const val MOVIE_TYPE = "movie"
+        const val DATABASE_NAME = "movie_database"
+        const val MOVIE_ID = "MOVIE_ID"
+        const val SHARED_PREF_NAME = "MOVIE_CATALOGUE_SP"
+        const val FAVORITE_MOVIE = "favorite_movie"
     }
 }

@@ -25,6 +25,7 @@ import com.ksw.gomovie.model.main.PeopleProfileImages
 import com.ksw.gomovie.network.MovieServiceApi
 import com.ksw.gomovie.network.NetworkModule
 import com.ksw.gomovie.repository.moviedetail.MovieDetailRepository
+import com.ksw.gomovie.util.BaseAppCompatActivity
 import com.ksw.gomovie.util.Constants.Companion.IMAGE_BASE_URL
 import com.ksw.gomovie.util.Constants.Companion.homePage
 import com.ksw.gomovie.viewmodel.MovieDetailViewModel
@@ -38,7 +39,7 @@ import java.util.*
  * Created by KSW on 2021-02-24
  */
 
-class MovieDetailActivity : AppCompatActivity() {
+class MovieDetailActivity : BaseAppCompatActivity() {
 
     private lateinit var binding: MovieDetailBinding
 

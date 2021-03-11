@@ -45,7 +45,7 @@ class MovieSearchFragment : Fragment() {
 
         searchAdapter = MovieSearchAdapter(
             searchMovieList,
-            context!!
+            requireContext()
         )
 
     }
