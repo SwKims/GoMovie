@@ -4,9 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
-import android.widget.ImageView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -14,14 +12,8 @@ import com.bumptech.glide.Glide
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.tabs.TabLayout
 import com.ksw.gomovie.R
-import com.ksw.gomovie.adapter.MovieDetailImageSlideAdapter
 import com.ksw.gomovie.adapter.MovieDetailTabAdapter
 import com.ksw.gomovie.databinding.MovieDetailBinding
-import com.ksw.gomovie.model.detail.Image
-import com.ksw.gomovie.model.detail.Poster
-import com.ksw.gomovie.model.main.Movie
-import com.ksw.gomovie.model.main.MovieDetail
-import com.ksw.gomovie.model.main.PeopleProfileImages
 import com.ksw.gomovie.network.MovieServiceApi
 import com.ksw.gomovie.network.NetworkModule
 import com.ksw.gomovie.repository.moviedetail.MovieDetailRepository
@@ -29,8 +21,6 @@ import com.ksw.gomovie.util.BaseAppCompatActivity
 import com.ksw.gomovie.util.Constants.Companion.IMAGE_BASE_URL
 import com.ksw.gomovie.util.Constants.Companion.homePage
 import com.ksw.gomovie.viewmodel.MovieDetailViewModel
-import com.smarteist.autoimageslider.SliderAnimations
-import com.stfalcon.imageviewer.StfalconImageViewer
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*

@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.ksw.gomovie.model.detail.MovieCredits
 import com.ksw.gomovie.model.detail.PeopleDetail
+import com.ksw.gomovie.model.detail.PeopleExternalDetail
 import com.ksw.gomovie.model.main.PeopleImages
 import com.ksw.gomovie.network.MovieServiceApi
 import com.ksw.gomovie.network.NetworkState
@@ -35,6 +36,10 @@ class CastDetailDataSource(
     private val _movieCredits = MutableLiveData<MovieCredits>()
     val movieCredits: LiveData<MovieCredits>
         get() = _movieCredits
+
+    private val _peopleDetailExternal = MutableLiveData<PeopleDetail>()
+    val peopleDetailExternal: LiveData<PeopleDetail>
+        get() = _peopleDetailExternal
 
     fun loadPeopleDetails(peopleId: Int) {
         _networkState.postValue(NetworkState.LOADING)
@@ -102,7 +107,27 @@ class CastDetailDataSource(
         }
     }
 
+    fun loadPeopleExternalDetail(peopleId: Int) {
+        _networkState.postValue(NetworkState.LOADING)
 
+        try {
+            apiServiceApi.getPeopleSNS(peopleId)
+                ?.subscribeOn(Schedulers.io())
+                ?.subscribe(
+                    {
+                        _peopleDetailExternal.postValue(it)
+                        _networkState.postValue(NetworkState.LOADED)
+                    },
+                    {
+                        _networkState.postValue(NetworkState.ERROR)
+                    }
+                )?.let {
+                    compositeDisposable.add(it)
+                }
+        } catch (e: Exception) {
+
+        }
+    }
 
 
 }

@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.ksw.gomovie.model.detail.MovieCredits
 import com.ksw.gomovie.model.detail.PeopleDetail
+import com.ksw.gomovie.model.detail.PeopleExternalDetail
 import com.ksw.gomovie.model.main.PeopleImages
 import com.ksw.gomovie.repository.cast.CastDetailRepository
 import io.reactivex.disposables.CompositeDisposable
@@ -29,6 +30,10 @@ class CastDetailViewModel(
 
     val movieCredits: LiveData<MovieCredits> by lazy {
         castDetailRepository.loadingMovieCredits(compositeDisposable, peopleId)
+    }
+
+    val peopleExternalDetail: LiveData<PeopleDetail> by lazy {
+        castDetailRepository.loadingPeopleExternalDetail(compositeDisposable, peopleId)
     }
 
 

@@ -1,6 +1,7 @@
 package com.ksw.gomovie.repository.moviedetail
 
 import androidx.lifecycle.LiveData
+import com.ksw.gomovie.model.detail.PeopleDetail
 import com.ksw.gomovie.model.response.VideoResponse
 import com.ksw.gomovie.model.main.MovieDetail
 import com.ksw.gomovie.model.response.CastResponse

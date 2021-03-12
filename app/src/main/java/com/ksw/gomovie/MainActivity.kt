@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var searchFragment: MovieSearchFragment
     lateinit var infoFragment: InfoFragment
 
+    lateinit var tvFragment: TvFragment
+
     /*lateinit var toolbar: Toolbar
     lateinit var bottomBar: BubbleNavigationConstraintView*/
 
@@ -37,8 +39,7 @@ class MainActivity : AppCompatActivity() {
         errorFragment = ErrorFragment()
         searchFragment = MovieSearchFragment()
         infoFragment = InfoFragment()
-
-
+        tvFragment = TvFragment()
 
 
 
@@ -59,7 +60,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 1 -> {
                     if (isNetworkAvailable()) {
-                        setFragment(movieFragment)
+                        setFragment(tvFragment)
                     } else {
                         setFragment(errorFragment)
                     }

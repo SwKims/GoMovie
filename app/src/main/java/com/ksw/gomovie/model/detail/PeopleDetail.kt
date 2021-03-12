@@ -25,5 +25,19 @@ data class PeopleDetail(
     val placeOfBirth: String,
     val popularity: Double,
     @SerializedName("profile_path")
-    val profilePath: String
+    val profilePath: String,
+
+    @SerializedName("facebook_id")
+    val facebookId: String,
+    @SerializedName("freebase_id")
+    val freebaseId: String,
+    @SerializedName("freebase_mid")
+    val freebaseMid: String,
+    @SerializedName("instagram_id")
+    var instagramId: String,
+    @SerializedName("tvrage_id")
+    val tvrageId: String,
+    @SerializedName("twitter_id")
+    val twitterId: String
+
 )

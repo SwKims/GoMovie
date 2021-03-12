@@ -59,7 +59,7 @@
             app:bt_colorInactive="@color/colorAccent"
             app:bt_icon="@drawable/ic_tv"
             app:bt_shape="@drawable/transition_background_drawable"
-            app:bt_title="Shows" />
+            app:bt_title="TvShow" />
 
         <com.gauravk.bubblenavigation.BubbleToggleView
             android:id="@+id/l_item_discover"
@@ -67,9 +67,9 @@
             android:layout_height="wrap_content"
             app:bt_colorActive="@color/black"
             app:bt_colorInactive="@color/colorAccent"
-            app:bt_icon="@drawable/ic_favorite"
+            app:bt_icon="@drawable/trophy"
             app:bt_shape="@drawable/transition_background_drawable"
-            app:bt_title="Favorite" />
+            app:bt_title="Awards" />
 
         <com.gauravk.bubblenavigation.BubbleToggleView
             android:id="@+id/l_item_watchlist"

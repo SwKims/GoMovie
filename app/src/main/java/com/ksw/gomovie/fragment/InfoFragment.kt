@@ -1,19 +1,14 @@
 package com.ksw.gomovie.fragment
 
-import android.Manifest.permission.CALL_PHONE
-import android.app.AlertDialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
-import com.ksw.gomovie.R
 import com.ksw.gomovie.databinding.InfoBinding
 import java.lang.Exception
-import java.util.jar.Manifest
 
 /**
  * Created by KSW on 2021-03-11
@@ -61,12 +56,7 @@ class InfoFragment : Fragment() {
             startActivity(intent)
         }
 
-
-
-
-
         return binding.root
     }
-
 
 }

@@ -2,6 +2,7 @@ package com.ksw.gomovie.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
+import com.ksw.gomovie.model.detail.PeopleExternalDetail
 import com.ksw.gomovie.model.response.VideoResponse
 import com.ksw.gomovie.model.main.MovieDetail
 import com.ksw.gomovie.model.response.CastResponse

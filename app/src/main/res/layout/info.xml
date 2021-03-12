@@ -20,7 +20,7 @@
         android:gravity="center_horizontal"
         android:text="김성원"
         android:textColor="@color/white"
-        android:textSize="23sp" />
+        android:textSize="27sp" />
 
     <TextView
         android:layout_width="match_parent"

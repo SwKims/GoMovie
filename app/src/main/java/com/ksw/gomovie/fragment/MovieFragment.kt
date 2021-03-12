@@ -33,7 +33,7 @@ class MovieFragment: Fragment() {
 
         val adapter =
             MovieTabAdapter(
-                fragmentManager!!,
+                requireFragmentManager(),
                 binding.tabMovie.tabCount
             )
 

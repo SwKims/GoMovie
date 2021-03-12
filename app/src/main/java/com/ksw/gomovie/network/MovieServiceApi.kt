@@ -2,6 +2,7 @@ package com.ksw.gomovie.network
 
 import com.ksw.gomovie.model.detail.MovieCredits
 import com.ksw.gomovie.model.detail.PeopleDetail
+import com.ksw.gomovie.model.detail.PeopleExternalDetail
 import com.ksw.gomovie.model.main.MovieDetail
 import com.ksw.gomovie.model.main.PeopleImages
 import com.ksw.gomovie.model.response.*
@@ -67,5 +68,19 @@ interface MovieServiceApi {
     fun getMovieCredits(
         @Path("id") id: Int
     ): Single<MovieCredits>
+
+    @GET("/person/{person_id}/external_ids")
+    fun getPeopleSNS(
+        @Path("person_id") id: Int
+    ): Single<PeopleDetail>
+
+    // tv
+
+    @GET("tv/{type}")
+    fun getTVList(
+        @Path("type") type: String,
+        @Query("page") page: Int
+    ): Single<TvResponse>
+
 
 }

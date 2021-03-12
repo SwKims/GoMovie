@@ -3,6 +3,7 @@ package com.ksw.gomovie.repository.cast
 import androidx.lifecycle.LiveData
 import com.ksw.gomovie.model.detail.MovieCredits
 import com.ksw.gomovie.model.detail.PeopleDetail
+import com.ksw.gomovie.model.detail.PeopleExternalDetail
 import com.ksw.gomovie.model.main.PeopleImages
 import com.ksw.gomovie.network.MovieServiceApi
 import io.reactivex.disposables.CompositeDisposable
@@ -51,6 +52,18 @@ class CastDetailRepository(private val apiServiceApi: MovieServiceApi) {
         castDetailDataSource.loadMovieCredits(peopleId)
 
         return castDetailDataSource.movieCredits
+    }
+
+    fun loadingPeopleExternalDetail(
+        compositeDisposable: CompositeDisposable,
+        peopleId: Int
+    ): LiveData<PeopleDetail> {
+        castDetailDataSource = CastDetailDataSource(
+            apiServiceApi, compositeDisposable
+        )
+        castDetailDataSource.loadPeopleExternalDetail(peopleId)
+
+        return castDetailDataSource.peopleDetailExternal
     }
 
 }

@@ -23,13 +23,12 @@ import com.ksw.gomovie.viewmodel.MovieListViewModel
  * Created by KSW on 2021-02-23
  */
 
-class MovieListFragment(private val type: String) : Fragment() {
+class MovieListFragment(private var type: String) : Fragment() {
 
     /*private var _binding: MovieListFragmentBinding? = null
     private val binding get() = _binding!!*/
     private lateinit var binding: MovieListFragmentBinding
 
-    //    private lateinit var rootView : View
     private lateinit var movieAdapter: MoviePageListAdapter
     private lateinit var movieListViewModel: MovieListViewModel
     lateinit var moviePagedListRepository: MoviePagedListRepository
@@ -37,7 +36,7 @@ class MovieListFragment(private val type: String) : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         movieAdapter = MoviePageListAdapter(
-            activity!!.applicationContext
+            requireActivity().applicationContext
         )
     }
 
