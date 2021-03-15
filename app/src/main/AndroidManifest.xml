@@ -27,6 +27,7 @@
         <activity
             android:name=".activity.CastDetailActivity"
             android:parentActivityName=".activity.MovieDetailActivity" />
+        <activity android:name=".activity.TvDetailActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"
