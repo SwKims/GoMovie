@@ -4,6 +4,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.ksw.gomovie.fragment.TvAboutFragment
+import com.ksw.gomovie.fragment.TvCastFragment
+import com.ksw.gomovie.fragment.TvCrewFragment
+import com.ksw.gomovie.fragment.TvSeasonsFragment
 
 /**
  * Created by KSW on 2021-03-15
@@ -21,13 +24,13 @@ class TvDetailTabAdapter(
                 return TvAboutFragment(tvId)
             }
             1 -> {
-                return TvAboutFragment(tvId)
+                return TvCastFragment(tvId)
             }
             2 -> {
-                return TvAboutFragment(tvId)
+                return TvCrewFragment(tvId)
             }
             3 -> {
-                return TvAboutFragment(tvId)
+                return TvSeasonsFragment(tvId)
             }
         }
         return TvAboutFragment(tvId)
@@ -40,9 +43,9 @@ class TvDetailTabAdapter(
     override fun getPageTitle(position: Int): CharSequence? {
         return when(position) {
             0 -> "About"
-            1 -> "Seasons"
-            2 -> "Cast"
-            3 -> "Crew"
+            1 -> "Cast"
+            2 -> "Crew"
+            3 -> "Seasons"
             else -> null
         }
 

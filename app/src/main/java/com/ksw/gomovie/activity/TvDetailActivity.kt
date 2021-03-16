@@ -46,9 +46,9 @@ class TvDetailActivity : BaseAppCompatActivity() {
         viewModel = getViewModel(tvId)
 
         binding.TvDetailTabLayout.addTab(binding.TvDetailTabLayout.newTab().setText("About"))
-        binding.TvDetailTabLayout.addTab(binding.TvDetailTabLayout.newTab().setText("Seasons"))
         binding.TvDetailTabLayout.addTab(binding.TvDetailTabLayout.newTab().setText("Cast"))
         binding.TvDetailTabLayout.addTab(binding.TvDetailTabLayout.newTab().setText("Crew"))
+        binding.TvDetailTabLayout.addTab(binding.TvDetailTabLayout.newTab().setText("Seasons"))
 
         val adapter = TvDetailTabAdapter(
             tvId, supportFragmentManager, binding.TvDetailTabLayout.tabCount
@@ -83,8 +83,14 @@ class TvDetailActivity : BaseAppCompatActivity() {
                 openTvHomePage()
             }
 
-            it?.voteAverage?.let { rating ->
+            /*it?.voteAverage?.let { rating ->
                 binding.TvRating.rating = (rating / 2).toFloat()
+            }*/
+
+            if (it.status == "Returning Series") {
+                binding.tvStatus.text = "방영중"
+            } else {
+                binding.tvStatus.text = "종영"
             }
 
             if (it.backdropPath.isNotEmpty()) {
@@ -161,7 +167,7 @@ class TvDetailActivity : BaseAppCompatActivity() {
     }
 
     private fun getViewModel(tvId: Int): TvDetailViewModel {
-        return ViewModelProvider(this, object : ViewModelProvider.Factory{
+        return ViewModelProvider(this, object : ViewModelProvider.Factory {
             override fun <T : ViewModel?> create(modelClass: Class<T>): T {
                 @Suppress("UNCHECKED_CAST")
                 return TvDetailViewModel(tvDetailRepository, tvId) as T

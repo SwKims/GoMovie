@@ -79,6 +79,12 @@ class TvAboutFragment(private val tvId: Int) : Fragment() {
                 binding.tvTvProductionCompanies.text = "-"
             }
 
+            if (it.numberOfEpisodes.toString().isNotEmpty()) {
+                binding.tvTvTotalEpisode.text = it.numberOfEpisodes.toString() + "화"
+            } else {
+                binding.tvTvTotalEpisode.text = "-"
+            }
+
 
             if (!it.genres.isNullOrEmpty()) {
                 tvGenreListAdapter = TvGenreListAdapter(

@@ -155,7 +155,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:text="제작나라"
+                    android:text="방영횟수"
                     android:textAlignment="viewStart"
                     android:textAppearance="@style/MovieDetailTitle" />
 
@@ -223,7 +223,7 @@
                     android:textAppearance="@style/MovieDetails" />
 
                 <TextView
-                    android:id="@+id/tv_Tv_production_countries"
+                    android:id="@+id/tv_TvTotalEpisode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
