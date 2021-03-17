@@ -1,13 +1,18 @@
 package com.ksw.gomovie.adapter
 
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.app.ActivityOptions
 import android.content.Context
+import android.content.Intent
+import android.util.Pair
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.ksw.gomovie.R
+import com.ksw.gomovie.activity.SeasonActivity
 import com.ksw.gomovie.databinding.ItemTvSeasonListBinding
 import com.ksw.gomovie.model.tv.Season
 import com.ksw.gomovie.util.Constants.Companion.IMAGE_BASE_URL
@@ -72,6 +77,14 @@ class TvSeasonListAdapter(
 
             itemView.setOnClickListener {
 
+                val intent = Intent(context, SeasonActivity::class.java)
+                intent.putExtra("seasonNumber", seasons.seasonNumber)
+                intent.putExtra("tvId", tvId)
+                val options = ActivityOptions.makeSceneTransitionAnimation(
+                    context as Activity?,
+                    Pair(binding.ivSeasonPoster, "seasonPosterTransition")
+                )
+                context.startActivity(intent, options.toBundle())
             }
 
         }

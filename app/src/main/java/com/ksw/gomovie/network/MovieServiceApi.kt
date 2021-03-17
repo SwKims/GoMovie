@@ -7,6 +7,7 @@ import com.ksw.gomovie.model.detail.TvDetail
 import com.ksw.gomovie.model.main.MovieDetail
 import com.ksw.gomovie.model.main.PeopleImages
 import com.ksw.gomovie.model.response.*
+import com.ksw.gomovie.model.tv.TvSeasonDetails
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -97,5 +98,23 @@ interface MovieServiceApi {
     fun getTvCast(
         @Path("tv_id") tvId: Int
     ): Single<CastResponse>
+
+    @GET("tv/{tv_id}/season/{season_number}")
+    fun getTvSeason(
+        @Path("tv_id") tvId: Int,
+        @Path("season_number") seasonNumber: Int
+    ): Single<TvSeasonDetails>
+
+    @GET("tv/{tv_id}/season/{season_number}/videos")
+    fun getTvSeasonVideos(
+        @Path("tv_id") tvId: Int,
+        @Path("season_number") seasonNumber: Int
+    ): Single<VideoResponse>
+
+    @GET("tv/{tv_id}/season/{season_number}/credits")
+    fun getTvSeasonCast(
+        @Path("tv_id") tvId: Int,
+        @Path("season_number") seasonNumber: Int
+    ) : Single<CastResponse>
 
 }
