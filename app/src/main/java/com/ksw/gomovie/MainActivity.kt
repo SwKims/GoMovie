@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var infoFragment: InfoFragment
 
     lateinit var tvFragment: TvFragment
+    lateinit var awardsFragment: AwardsFragment
 
     /*lateinit var toolbar: Toolbar
     lateinit var bottomBar: BubbleNavigationConstraintView*/
@@ -40,8 +41,7 @@ class MainActivity : AppCompatActivity() {
         searchFragment = MovieSearchFragment()
         infoFragment = InfoFragment()
         tvFragment = TvFragment()
-
-
+        awardsFragment = AwardsFragment()
 
         if (isNetworkAvailable()) {
             setFragment(movieFragment)
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 2 -> {
                     if (isNetworkAvailable()) {
-                        setFragment(movieFragment)
+                        setFragment(awardsFragment)
                     } else {
                         setFragment(errorFragment)
                     }
@@ -92,9 +92,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
-
-
 
     private fun setFragment(fragment: Fragment) {
 

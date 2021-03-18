@@ -31,6 +31,7 @@
         <activity
             android:name=".activity.SeasonActivity"
             android:parentActivityName=".activity.TvDetailActivity" />
+        <activity android:name=".fragment.AwardMovieListFragment" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -61,16 +61,18 @@ class TvSeasonListAdapter(
                 val targetFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd")
                 val date: Date = originalFormat.parse(seasons.airDate)
                 val formattedDate: String = targetFormat.format(date)
-                binding.tvSeasonStartDay.text = "시즌 시작일 : " + formattedDate
+                binding.tvSeasonStartDay.text = "시작일 : $formattedDate"
+            } else {
+                binding.tvSeasonStartDay.text = "-"
             }
 
             if (seasons.posterPath.isNotEmpty()) {
                 val posterUrl = IMAGE_BASE_URL + seasons.posterPath
-                Glide.with(binding.root)
+                Glide.with(binding.root.context)
                     .load(posterUrl)
                     .into(binding.ivSeasonPoster)
             } else {
-                Glide.with(binding.root)
+                Glide.with(binding.root.context)
                     .load(R.drawable.ic_error)
                     .into(binding.ivSeasonPoster)
             }

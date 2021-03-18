@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
+    android:background="@color/colorPrimary"
     android:orientation="horizontal">
 
     <androidx.cardview.widget.CardView
@@ -49,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_vertical"
             android:layout_margin="4dp"
-            android:textAppearance="@style/MovieDetails2" />
+            android:textAppearance="@style/SeasonDetail" />
 
     </LinearLayout>
 

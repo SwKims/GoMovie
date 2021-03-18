@@ -25,7 +25,11 @@ class MovieAdapter(private val movies: List<Movie>, private val context: Context
     RecyclerView.Adapter<MovieAdapter.MovieHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieHolder {
-        return MovieHolder.from(parent)
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val view: View = layoutInflater.inflate(R.layout.item_movie_list, parent, false)
+        return MovieHolder(
+            ItemMovieListBinding.bind(view)
+        )
     }
 
     override fun onBindViewHolder(holder: MovieHolder, position: Int) {
@@ -42,16 +46,17 @@ class MovieAdapter(private val movies: List<Movie>, private val context: Context
 
         @SuppressLint("SetTextI18n")
         fun bind(movies: Movie, context: Context) {
-            binding.tvMovieTitle.text = movies?.title
-            binding.tvRating.text = "⭐ " + movies?.voteAverage.toString()
 
-            if (movies.posterPath.isEmpty()) {
-                val postUrl = IMAGE_BASE_URL + movies?.posterPath
-                Glide.with(itemView.context)
+            binding.tvMovieTitle.text = movies.title
+            binding.tvRating.text = "⭐ " + movies.voteAverage.toString()
+
+            if (movies.posterPath.isNotEmpty()) {
+                val postUrl = IMAGE_BASE_URL + movies.posterPath
+                Glide.with(binding.root)
                     .load(postUrl)
                     .into(binding.ivMovieImage)
             } else {
-                Glide.with(itemView.context)
+                Glide.with(binding.root)
                     .load(R.drawable.ic_error)
                     .centerInside()
                     .into(binding.ivMovieImage)
@@ -72,13 +77,7 @@ class MovieAdapter(private val movies: List<Movie>, private val context: Context
 
         }
 
-        companion object {
-            fun from(parent: ViewGroup): MovieHolder {
-                val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = ItemMovieListBinding.inflate(layoutInflater, parent, false)
-                return MovieHolder(binding)
-            }
-        }
+
     }
 
 

@@ -4,6 +4,7 @@ import com.ksw.gomovie.model.detail.MovieCredits
 import com.ksw.gomovie.model.detail.PeopleDetail
 import com.ksw.gomovie.model.detail.PeopleExternalDetail
 import com.ksw.gomovie.model.detail.TvDetail
+import com.ksw.gomovie.model.main.FeatureMovieLists
 import com.ksw.gomovie.model.main.MovieDetail
 import com.ksw.gomovie.model.main.PeopleImages
 import com.ksw.gomovie.model.response.*
@@ -116,5 +117,16 @@ interface MovieServiceApi {
         @Path("tv_id") tvId: Int,
         @Path("season_number") seasonNumber: Int
     ) : Single<CastResponse>
+
+    @GET("discover/movie?&region=kr&sort_by=popularity.desc")
+    fun getAwardsMovies(
+        @Query("with_genres") id: Int,
+        @Query("page") page: Int
+    ): Single<MovieResponse>
+
+    @GET("list/{list_id}")
+    fun getFeaturedMovies(
+        @Path("list_id") listId: Int
+    ): Single<FeatureMovieLists>
 
 }

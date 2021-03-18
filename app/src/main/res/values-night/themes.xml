@@ -99,4 +99,24 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">20sp</item>
     </style>
+
+    <style name="MovieAwardsTitle">
+        <item name="android:textColor">@color/awardsTitle</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="MovieAwards">
+        <item name="android:textColor">@color/awards</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="SeasonDetail">
+        <item name="android:textColor">@color/season</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
 </resources>
