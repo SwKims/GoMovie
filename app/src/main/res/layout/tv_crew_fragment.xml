@@ -11,11 +11,11 @@
 
     <ImageView
         android:id="@+id/iv_NoCrewImage"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
         android:layout_gravity="center"
         android:layout_marginBottom="150dp"
-        android:background="@drawable/ic_search"
+        android:background="@drawable/ic_sad"
         android:visibility="gone" />
 
     <TextView

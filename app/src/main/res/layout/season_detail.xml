@@ -80,9 +80,8 @@
                     android:layout_toEndOf="@+id/card_season_detailPoster"
                     android:drawablePadding="4dp"
                     android:padding="2dp"
-                    android:textSize="13sp"
-                    android:textStyle="bold"
-                    app:drawableStartCompat="@drawable/ic_calendar" />
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_season_runtime"
@@ -115,16 +114,6 @@
                          android:layout_toEndOf="@+id/card_movie_detailPoster"
                          android:padding="2dp"
                          android:textAlignment="viewStart" />-->
-
-                <Button
-                    android:id="@+id/bt_Tvhomepage"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="11dp"
-                    android:text="홈페이지"
-                    android:textColor="@color/white" />
 
             </RelativeLayout>
 

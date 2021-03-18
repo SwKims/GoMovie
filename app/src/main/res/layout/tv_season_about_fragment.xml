@@ -60,6 +60,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -86,17 +87,7 @@
                     android:textAlignment="viewStart"
                     android:textAppearance="@style/MovieDetailTitle" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="언어"
-                    android:textAlignment="viewStart"
-                    android:textAppearance="@style/MovieDetailTitle" />
-
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -116,15 +107,6 @@
                 <TextView
                     android:id="@+id/tv_seasonEpisodeCounts"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:textAlignment="viewStart"
-                    android:textAppearance="@style/MovieDetails" />
-
-                <TextView
-                    android:id="@+id/tv_Tv_spoken_language"
-                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"

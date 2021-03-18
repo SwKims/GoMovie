@@ -44,17 +44,24 @@ class TvCastFragment(private val tvId: Int) : Fragment() {
 
         tvDetailModel = getViewModel(tvId)
         tvDetailModel.tvCastDetails.observe(viewLifecycleOwner) {
-            castDetail = it.castDetail
-            castListAdapter = CastListAdapter(
-                castDetail, binding.root.context
-            )
 
-            linearLayoutManager = LinearLayoutManager(activity)
-            linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
+            if (it.castDetail.isNotEmpty()) {
+                castDetail = it.castDetail
+                castListAdapter = CastListAdapter(
+                    castDetail, binding.root.context
+                )
 
-            binding.rvTvCastList.layoutManager = linearLayoutManager
-            binding.rvTvCastList.setHasFixedSize(true)
-            binding.rvTvCastList.adapter = castListAdapter
+                linearLayoutManager = LinearLayoutManager(activity)
+                linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
+
+                binding.rvTvCastList.layoutManager = linearLayoutManager
+                binding.rvTvCastList.setHasFixedSize(true)
+                binding.rvTvCastList.adapter = castListAdapter
+            } else {
+                binding.ivNoCastImage.visibility = View.VISIBLE
+                binding.tvNoCastText.visibility = View.VISIBLE
+            }
+
         }
 
         return binding.root
