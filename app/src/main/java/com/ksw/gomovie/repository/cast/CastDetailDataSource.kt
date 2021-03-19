@@ -6,6 +6,7 @@ import com.ksw.gomovie.model.detail.MovieCredits
 import com.ksw.gomovie.model.detail.PeopleDetail
 import com.ksw.gomovie.model.detail.PeopleExternalDetail
 import com.ksw.gomovie.model.main.PeopleImages
+import com.ksw.gomovie.model.tv.TvCredits
 import com.ksw.gomovie.network.MovieServiceApi
 import com.ksw.gomovie.network.NetworkState
 import io.reactivex.disposables.CompositeDisposable
@@ -40,6 +41,10 @@ class CastDetailDataSource(
     private val _peopleDetailExternal = MutableLiveData<PeopleDetail>()
     val peopleDetailExternal: LiveData<PeopleDetail>
         get() = _peopleDetailExternal
+
+    private val _tvCreditsResponse = MutableLiveData<TvCredits>()
+    val tvCreditsResponse: LiveData<TvCredits>
+        get() = _tvCreditsResponse
 
     fun loadPeopleDetails(peopleId: Int) {
         _networkState.postValue(NetworkState.LOADING)
@@ -122,6 +127,27 @@ class CastDetailDataSource(
                         _networkState.postValue(NetworkState.ERROR)
                     }
                 )?.let {
+                    compositeDisposable.add(it)
+                }
+        } catch (e: Exception) {
+
+        }
+    }
+
+    fun loadTvCredits(peopleId: Int) {
+        _networkState.postValue(NetworkState.LOADING)
+        try {
+            apiServiceApi.getTvCredits(peopleId)
+                .subscribeOn(Schedulers.io())
+                .subscribe(
+                    {
+                        _tvCreditsResponse.postValue(it)
+                        _networkState.postValue(NetworkState.LOADED)
+                    },
+                    {
+                        _networkState.postValue(NetworkState.ERROR)
+                    }
+                ).let {
                     compositeDisposable.add(it)
                 }
         } catch (e: Exception) {

@@ -4,13 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.ksw.gomovie.adapter.MoviePageListAdapter
 import com.ksw.gomovie.databinding.MovieListFragmentBinding
 import com.ksw.gomovie.network.MovieServiceApi
@@ -23,7 +20,7 @@ import com.ksw.gomovie.viewmodel.MovieListViewModel
  * Created by KSW on 2021-02-23
  */
 
-class MovieListFragment(private var type: String) : Fragment() {
+class MovieListFragment(private val type: String) : Fragment() {
 
     /*private var _binding: MovieListFragmentBinding? = null
     private val binding get() = _binding!!*/
@@ -46,7 +43,7 @@ class MovieListFragment(private var type: String) : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = MovieListFragmentBinding.inflate(inflater, container, false)
 
         val apiService: MovieServiceApi = NetworkModule.getClient()

@@ -5,6 +5,7 @@ import com.ksw.gomovie.model.detail.MovieCredits
 import com.ksw.gomovie.model.detail.PeopleDetail
 import com.ksw.gomovie.model.detail.PeopleExternalDetail
 import com.ksw.gomovie.model.main.PeopleImages
+import com.ksw.gomovie.model.tv.TvCredits
 import com.ksw.gomovie.network.MovieServiceApi
 import io.reactivex.disposables.CompositeDisposable
 
@@ -64,6 +65,18 @@ class CastDetailRepository(private val apiServiceApi: MovieServiceApi) {
         castDetailDataSource.loadPeopleExternalDetail(peopleId)
 
         return castDetailDataSource.peopleDetailExternal
+    }
+
+    fun loadingTvCredits(
+        compositeDisposable: CompositeDisposable,
+        peopleId: Int
+    ): LiveData<TvCredits> {
+        castDetailDataSource = CastDetailDataSource(
+            apiServiceApi, compositeDisposable
+        )
+        castDetailDataSource.loadTvCredits(peopleId)
+
+        return castDetailDataSource.tvCreditsResponse
     }
 
 }

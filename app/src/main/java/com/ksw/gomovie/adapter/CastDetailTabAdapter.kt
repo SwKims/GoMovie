@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.ksw.gomovie.fragment.CastAboutFragment
 import com.ksw.gomovie.fragment.CastMovieFragment
+import com.ksw.gomovie.fragment.CastShowFragment
 
 /**
  * Created by KSW on 2021-03-05
@@ -25,12 +26,12 @@ class CastDetailTabAdapter(
                )
            }
            1 -> {
-               return CastAboutFragment(
+               return CastMovieFragment(
                    castId
                )
            }
        }
-        return CastAboutFragment(
+        return CastShowFragment(
             castId
         )
     }

@@ -8,6 +8,7 @@ import com.ksw.gomovie.model.main.FeatureMovieLists
 import com.ksw.gomovie.model.main.MovieDetail
 import com.ksw.gomovie.model.main.PeopleImages
 import com.ksw.gomovie.model.response.*
+import com.ksw.gomovie.model.tv.TvCredits
 import com.ksw.gomovie.model.tv.TvSeasonDetails
 import io.reactivex.Single
 import retrofit2.http.GET
@@ -128,5 +129,10 @@ interface MovieServiceApi {
     fun getFeaturedMovies(
         @Path("list_id") listId: Int
     ): Single<FeatureMovieLists>
+
+    @GET("person/{id}/tv_credits")
+    fun getTvCredits(
+        @Path("id") id: Int
+    ): Single<TvCredits>
 
 }
