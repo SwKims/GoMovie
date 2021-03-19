@@ -20,7 +20,7 @@ import com.ksw.gomovie.network.NetworkModule
 // https://api.themoviedb.org/3/list/144105?api_key=4defd070082d28cda9bb902140bcf8d0&language=ko-KR
 
 
-class AwardsFragment: Fragment() {
+class AwardsFragment : Fragment() {
 
     private lateinit var binding: AwardsFragmentBinding
 
@@ -52,6 +52,30 @@ class AwardsFragment: Fragment() {
                 144105
             )
         )
+        awardMovieList.add(
+            1,
+            FeaturedMovieItem(
+                "Golden Globe Winners 2020",
+                "https://image.tmdb.org/t/p/original/ApiBzeaa95TNYliSbQ8pJv4Fje7.jpg",
+                132860
+            )
+        )
+        awardMovieList.add(
+            2,
+            FeaturedMovieItem(
+                "Oscar 2019",
+                "https://image.tmdb.org/t/p/original/jNUpYq2jRSwQM89vST9yQZelMSu.jpg",
+                118240
+            )
+        )
+        awardMovieList.add(
+            3,
+            FeaturedMovieItem(
+                "Oscar 2018",
+                "https://image.tmdb.org/t/p/original/rgyhSn3mINvkuy9iswZK0VLqQO3.jpg",
+                63978
+            )
+        )
 
     }
 
@@ -68,7 +92,5 @@ class AwardsFragment: Fragment() {
         populatingAwardList()
         super.onResume()
     }
-
-
 
 }

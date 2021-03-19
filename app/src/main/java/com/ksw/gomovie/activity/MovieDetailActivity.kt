@@ -135,7 +135,7 @@ class MovieDetailActivity : BaseAppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.detail_menu, menu)
+//        menuInflater.inflate(R.menu.detail_menu, menu)
         super.onCreateOptionsMenu(menu)
         return true
     }
