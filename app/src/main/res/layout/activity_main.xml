@@ -14,8 +14,7 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toTopOf="@+id/bottom_constraint"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bottom_constraint"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
         android:id="@+id/bottom_constraint"

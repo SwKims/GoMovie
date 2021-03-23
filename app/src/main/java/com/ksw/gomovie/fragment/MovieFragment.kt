@@ -26,7 +26,7 @@ class MovieFragment: Fragment() {
     ): View {
 
         binding = MovieMainFragmentBinding.inflate(inflater, container, false)
-        binding.tabMovie.addTab(binding.tabMovie.newTab().setText("Now Playing"))
+//        binding.tabMovie.addTab(binding.tabMovie.newTab().setText("Now Playing"))
         binding.tabMovie.addTab(binding.tabMovie.newTab().setText("Popular"))
         binding.tabMovie.addTab(binding.tabMovie.newTab().setText("Top Rated"))
         binding.tabMovie.addTab(binding.tabMovie.newTab().setText("Upcoming"))

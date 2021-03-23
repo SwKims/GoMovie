@@ -16,22 +16,22 @@ class MovieTabAdapter(
 
     override fun getItem(position: Int): Fragment {
         when (position) {
-            0 -> {
+           /* 0 -> {
                 return MovieListFragment(
                     "now_playing"
                 )
-            }
-            1 -> {
+            }*/
+            0 -> {
                 return MovieListFragment(
                     "popular"
                 )
             }
-            2 -> {
+            1 -> {
                 return MovieListFragment(
                     "top_rated"
                 )
             }
-            3 -> {
+            2 -> {
                 return MovieListFragment(
                     "upcoming"
                 )
@@ -42,10 +42,10 @@ class MovieTabAdapter(
 
     override fun getPageTitle(position: Int): CharSequence? {
         return when (position) {
-            0 -> "Now Playing"
-            1 -> "Popular"
-            2 -> "Top Rated"
-            3 -> "Upcoming"
+//            0 -> "Now Playing"
+            0 -> "Popular"
+            1 -> "Top Rated"
+            2 -> "Upcoming"
             else -> null
         }
     }

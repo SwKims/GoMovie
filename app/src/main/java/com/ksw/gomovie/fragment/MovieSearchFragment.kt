@@ -95,11 +95,11 @@ class MovieSearchFragment : Fragment() {
 
         disposable.add(observer)
 
-        if (binding.etMovieSearch.text.isNullOrEmpty()) {
+        if (binding.textInputEditText.text.isNullOrEmpty()) {
             searchMovieList.clear()
             searchAdapter.notifyDataSetChanged()
 
-            RxTextView.textChangeEvents(binding.etMovieSearch)
+            RxTextView.textChangeEvents(binding.textInputEditText)
                 .skipInitialValue()
                 .debounce(500, TimeUnit.MILLISECONDS)
                 .subscribeOn(Schedulers.io())
@@ -135,8 +135,8 @@ class MovieSearchFragment : Fragment() {
     private fun searchContactsTextWatcher(): DisposableObserver<TextViewTextChangeEvent?>? {
         return object : DisposableObserver<TextViewTextChangeEvent?>() {
             override fun onNext(textViewTextChangeEvent: TextViewTextChangeEvent) {
-                if (textViewTextChangeEvent.text().isNullOrBlank() || textViewTextChangeEvent.text()
-                        .isNullOrEmpty()
+                if (textViewTextChangeEvent.text().isBlank() || textViewTextChangeEvent.text()
+                        .isEmpty()
                 ) {
                     searchMovieList.clear()
                     searchAdapter.notifyDataSetChanged()
@@ -160,7 +160,7 @@ class MovieSearchFragment : Fragment() {
     override fun onPause() {
         disposable.clear()
         searchMovieList.clear()
-        binding.etMovieSearch.setText("")
+        binding.textInputEditText.setText("")
         super.onPause()
     }
 

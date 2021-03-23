@@ -18,6 +18,7 @@
             app:tabIndicatorColor="@color/movieDetailTab"
             app:tabMode="scrollable"
             app:tabSelectedTextColor="@color/movieDetailTab"
+            app:tabTextAppearance="@style/tabText"
             app:tabTextColor="@color/colorAccent" />
 
     </com.google.android.material.appbar.AppBarLayout>

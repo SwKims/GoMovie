@@ -40,7 +40,7 @@ class MovieDetailImageSlideAdapter(private val images: List<Image>) :
         SliderViewAdapter.ViewHolder(binding.root) {
 
         fun bind(image: Image) {
-            Glide.with(binding.root)
+            Glide.with(binding.root.context)
                 .load(MOVIE_IMAGE_URL + image.filePath)
                 .error(R.drawable.ic_error)
                 .into(binding.ivMovieImageSlider)

@@ -56,7 +56,7 @@ class TvSeasonListAdapter(
             binding.tvSeasonNumber.text = seasons.name
             binding.tvSeasonEpisodeCount.text = "총 "+ seasons.episodeCount.toString() + "회"
 
-            if (seasons.airDate.isNotEmpty()) {
+            if (!seasons.airDate.isNullOrEmpty()) {
                 val originalFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.KOREA)
                 val targetFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd")
                 val date: Date = originalFormat.parse(seasons.airDate)
@@ -66,7 +66,7 @@ class TvSeasonListAdapter(
                 binding.tvSeasonStartDay.text = "-"
             }
 
-            if (seasons.posterPath.isNotEmpty()) {
+            if (!seasons.posterPath.isNullOrEmpty()) {
                 val posterUrl = IMAGE_BASE_URL + seasons.posterPath
                 Glide.with(binding.root.context)
                     .load(posterUrl)
