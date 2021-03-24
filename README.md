@@ -41,4 +41,9 @@ info
 <img src="https://user-images.githubusercontent.com/71965874/112265632-25243b00-8cb6-11eb-8ef1-a0fb205ef957.jpg" width="30%" height="20%">
 </p>
 
-
+#### 트레일러 실행 화면  /  영화 출연진 화면(Cast) /  영화 출연진 화면(Crew)   
+<p float="center">
+<img src="https://user-images.githubusercontent.com/71965874/112269961-6e778900-8cbc-11eb-948d-dbe65c9ca347.jpg" width="30%" height="20%">
+<img src="https://user-images.githubusercontent.com/71965874/112269965-6f101f80-8cbc-11eb-8a2a-6190145de6cb.jpg" width="30%" height="20%">
+<img src="https://user-images.githubusercontent.com/71965874/112269952-6cadc580-8cbc-11eb-8959-dd0058eb99c5.jpg" width="30%" height="20%">
+</p>
