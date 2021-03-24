@@ -55,9 +55,11 @@ info
 <img src="https://user-images.githubusercontent.com/71965874/112272588-c237a180-8cbf-11eb-9169-76cd813f04e9.jpg" width="30%" height="20%">
 </p>
 
-#### 드라마, 예능 출연진 화면 (Cast)  /  드라마, 예능 출연진 화면 (Crew) /  시즌 리스트    
+#### 드라마, 예능 출연진 화면 (Cast)  /  드라마, 예능 출연진 화면 (Crew) /  시즌 리스트 화면   
 <p float="center">
 <img src="https://user-images.githubusercontent.com/71965874/112273521-c912e400-8cc0-11eb-9a43-2bff34a3e136.jpg" width="30%" height="20%">
 <img src="https://user-images.githubusercontent.com/71965874/112273529-ca441100-8cc0-11eb-8dcd-044b0d29605d.jpg" width="30%" height="20%">
 <img src="https://user-images.githubusercontent.com/71965874/112273536-cadca780-8cc0-11eb-97de-f80f438f3809.jpg" width="30%" height="20%">
 </p>
+
+
