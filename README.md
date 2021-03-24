@@ -69,5 +69,11 @@ info
 <img src="https://user-images.githubusercontent.com/71965874/112274414-cfee2680-8cc1-11eb-87bb-5fd216780d0e.jpg" width="30%" height="20%">
 </p>
 
+#### 시즌 에피소드  화면  /  시즌 에피소드 리스트 화면  /  시즌 에피소드 출연진 화면   
+<p float="center">
+<img src="https://user-images.githubusercontent.com/71965874/112275935-7c7cd800-8cc3-11eb-94dd-f60163ea7bf3.jpg" width="30%" height="20%">
+<img src="https://user-images.githubusercontent.com/71965874/112275943-7e469b80-8cc3-11eb-9367-d1221acaa4b7.jpg" width="30%" height="20%">
+</p>
+
 
 
