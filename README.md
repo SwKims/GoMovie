@@ -31,3 +31,4 @@ info
 <img src="https://user-images.githubusercontent.com/71965874/112262372-e6d84d00-8cb0-11eb-9b4c-0683291f7087.jpg" width="30%" height="20%">
 <img src="https://user-images.githubusercontent.com/71965874/112262378-e770e380-8cb0-11eb-99a8-fe35d46f5f2b.jpg" width="30%" height="20%">
 </p>
+1. 메인화면(pager)  2.  dsf 3. 
