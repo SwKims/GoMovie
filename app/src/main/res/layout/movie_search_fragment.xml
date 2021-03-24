@@ -10,11 +10,11 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="6dp"
         android:background="@color/white"
         android:hint="Search Movie"
         app:endIconMode="clear_text"
-        app:helperText="영화제목을 검색 해주세요."
+        app:helperText="영화제목을 검색 해주세요 (영어 or 한글)"
         app:helperTextTextAppearance="@style/SeasonDetail"
         app:startIconDrawable="@drawable/ic_search">
 
