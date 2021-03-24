@@ -41,7 +41,7 @@ info
 <img src="https://user-images.githubusercontent.com/71965874/112265632-25243b00-8cb6-11eb-8ef1-a0fb205ef957.jpg" width="30%" height="20%">
 </p>
 
-#### 영화배우 상세 화면  /  영화배우 다른 영화 출연 화면 /  영화배우 다른 티비쇼 출연 화면   
+#### 영화배우 상세 화면  /  영화배우 다른 영화 출연 화면 /  영화배우 다른 티비(드라마, ) 출연 화면   
 <p float="center">
 <img src="https://user-images.githubusercontent.com/71965874/112269961-6e778900-8cbc-11eb-948d-dbe65c9ca347.jpg" width="30%" height="20%">
 <img src="https://user-images.githubusercontent.com/71965874/112269965-6f101f80-8cbc-11eb-8a2a-6190145de6cb.jpg" width="30%" height="20%">
