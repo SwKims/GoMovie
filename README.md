@@ -34,11 +34,11 @@ info
 <img src="https://user-images.githubusercontent.com/71965874/112262378-e770e380-8cb0-11eb-99a8-fe35d46f5f2b.jpg" width="30%" height="20%">
 </p>   
 
-#### 메인화면(Popular, Top Rated, Upcoming)  / 영화 선택 화면(Detail) / 영화 소개 화면  
+#### 트레일러 실행 화면  / 영화 출연진 화면(Cast) / 영화 출연진 화면(Crew)   
 <p float="center">
 <img src="https://user-images.githubusercontent.com/71965874/112265635-25bcd180-8cb6-11eb-9a35-b01b0764fe46.jpg" width="30%" height="20%">
-<img src="https://user-images.githubusercontent.com/71965874/112265632-25243b00-8cb6-11eb-8ef1-a0fb205ef957.jpg" width="30%" height="20%">
 <img src="https://user-images.githubusercontent.com/71965874/112265629-248ba480-8cb6-11eb-90cd-56b8e0f92fc6.jpg" width="30%" height="20%">
+<img src="https://user-images.githubusercontent.com/71965874/112265632-25243b00-8cb6-11eb-8ef1-a0fb205ef957.jpg" width="30%" height="20%">
 </p>
 
 
