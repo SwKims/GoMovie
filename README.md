@@ -27,7 +27,7 @@ info
 
 ## * ScreenShot
 <p float="center">
-<img src="https://user-images.githubusercontent.com/71965874/112262370-e5a72000-8cb0-11eb-8ac5-d70416565d83.jpg" width="33%" height="25%">
-<img src="https://user-images.githubusercontent.com/71965874/112262372-e6d84d00-8cb0-11eb-9b4c-0683291f7087.jpg" width="33%" height="25%">
-<img src="https://user-images.githubusercontent.com/71965874/112262378-e770e380-8cb0-11eb-99a8-fe35d46f5f2b.jpg" width="33%" height="25%">
+<img src="https://user-images.githubusercontent.com/71965874/112262370-e5a72000-8cb0-11eb-8ac5-d70416565d83.jpg" width="33%" height="20%">
+<img src="https://user-images.githubusercontent.com/71965874/112262372-e6d84d00-8cb0-11eb-9b4c-0683291f7087.jpg" width="33%" height="20%">
+<img src="https://user-images.githubusercontent.com/71965874/112262378-e770e380-8cb0-11eb-99a8-fe35d46f5f2b.jpg" width="33%" height="20%">
 </p>
