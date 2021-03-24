@@ -14,7 +14,7 @@
 
 
 
-### 구조   
+### * 구조   
 
 Movie(base)-popular-top rated- upcoming
 TvShow-nowplaying-on air- popular
@@ -27,6 +27,7 @@ info
 
 ## * ScreenShot
 <p float="center">
-<img src="https://user-images.githubusercontent.com/71965874/111738636-080df780-88c5-11eb-9590-06095ba1aa7a.jpg" width="35%" height="25%">
-<img src="https://user-images.githubusercontent.com/71965874/111738642-093f2480-88c5-11eb-8923-110317f36e10.jpg" width="35%" height="25%">
+<img src="https://user-images.githubusercontent.com/71965874/112262370-e5a72000-8cb0-11eb-8ac5-d70416565d83.jpg" width="33%" height="25%">
+<img src="https://user-images.githubusercontent.com/71965874/112262372-e6d84d00-8cb0-11eb-9b4c-0683291f7087.jpg" width="33%" height="25%">
+<img src="https://user-images.githubusercontent.com/71965874/112262378-e770e380-8cb0-11eb-99a8-fe35d46f5f2b.jpg" width="33%" height="25%">
 </p>
