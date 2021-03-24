@@ -36,8 +36,9 @@ info
 
 #### 메인화면(Popular, Top Rated, Upcoming)  / 영화 선택 화면(Detail) / 영화 소개 화면  
 <p float="center">
-<img src="https://user-images.githubusercontent.com/71965874/112265629-248ba480-8cb6-11eb-90cd-56b8e0f92fc6.jpg" width="30%" height="20%">
-<img src="https://user-images.githubusercontent.com/71965874/112265632-25243b00-8cb6-11eb-8ef1-a0fb205ef957.jpg" width="30%" height="20%">
 <img src="https://user-images.githubusercontent.com/71965874/112265635-25bcd180-8cb6-11eb-9a35-b01b0764fe46.jpg" width="30%" height="20%">
+<img src="https://user-images.githubusercontent.com/71965874/112265632-25243b00-8cb6-11eb-8ef1-a0fb205ef957.jpg" width="30%" height="20%">
+<img src="https://user-images.githubusercontent.com/71965874/112265629-248ba480-8cb6-11eb-90cd-56b8e0f92fc6.jpg" width="30%" height="20%">
 </p>
+
 
