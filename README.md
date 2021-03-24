@@ -11,3 +11,13 @@
 - [ExpandableTextView](https://github.com/Manabu-GT/ExpandableTextView)   
 - [CirecleImageView](https://github.com/hdodenhof/CircleImageView)   
 - [Imageviewer](https://github.com/stfalcon-studio/StfalconImageViewer)
+
+
+
+### 구조   
+
+Movie(base)-popular-top rated- upcoming
+TvShow-nowplaying-on air- popular
+award-
+search-
+info
