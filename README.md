@@ -22,7 +22,7 @@ award-
 search-
 info
 
-<img src="https://user-images.githubusercontent.com/71965874/112255790-4846ee80-8ca6-11eb-9709-ca312639806a.png">
+<img src="https://user-images.githubusercontent.com/71965874/112255790-4846ee80-8ca6-11eb-9709-ca312639806a.png" >
 
 
 ## * ScreenShot
