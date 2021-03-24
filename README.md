@@ -27,7 +27,7 @@ info
 </p>
 
 ## * ScreenShot   
-#### 메인화면(TabLayout, Viewpager)  / 영화 디테일 화면   
+#### 메인화면(Popular, Top Rated, Upcoming)  / 영화 선택 화면(detail) / 영화 소개 화면  
 <p float="center">
 <img src="https://user-images.githubusercontent.com/71965874/112262370-e5a72000-8cb0-11eb-8ac5-d70416565d83.jpg" width="30%" height="20%">
 <img src="https://user-images.githubusercontent.com/71965874/112262372-e6d84d00-8cb0-11eb-9b4c-0683291f7087.jpg" width="30%" height="20%">
